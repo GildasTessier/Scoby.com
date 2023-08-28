@@ -1,0 +1,64 @@
+:root {
+    --green-dark : #40604D;
+    --green-light : #A4AD9C;
+    --gray : #D8D8D8;
+
+}
+
+@font-face {
+    font-family: 'comfortaa-sb'; 
+    src: url(/Asset/font/Comfortaa-SemiBold.ttf);
+}
+@font-face {
+    font-family: 'comfortaa-light'; 
+    src: url(/Asset/font/Comfortaa-Light.ttf);
+}
+/*********** Background **********/
+.bg-green-dark {
+    background-color: var(--green-dark);
+}
+.bg-green-light {
+    background-color: var(--green-light);
+}
+.bg-gray {
+    background-color: var(--gray);
+}
+/*********** text **********/
+body {
+    font-family: 'comfortaa-sb';
+}
+.text-green-dark {
+    color: var(--green-dark);
+}
+.text-green-light {
+    color: var(--green-light);
+}
+.text-gray {
+    color: var(--gray);
+}
+
+
+
+/*********** NavBar **********/
+.logo {
+    font-size: 20px;
+}
+.icon-navbar {
+    width: 40px;
+    height: 40px;
+    margin: 10px, ;
+}
+
+/*********** btn **********/
+.nav-link {
+    border-radius: 10px;
+    color: var(--green-light);
+    font-size: 15px;
+    padding: 10px 40px;
+
+}
+.select {
+    background-color: var(--green-light);
+    color: var(--green-dark);
+}
+
