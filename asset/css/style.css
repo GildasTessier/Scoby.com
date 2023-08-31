@@ -14,6 +14,9 @@
     src: url(/Asset/font/Comfortaa-Light.ttf);
 }
 /*********** Background **********/
+body {
+    background-color: var(--gray);
+}
 .bg-green-dark {
     background-color: var(--green-dark);
 }
@@ -25,7 +28,7 @@
 }
 /*********** text **********/
 body {
-    font-family: 'comfortaa-sb';
+    font-family: 'comfortaa-light';
 }
 .text-green-dark {
     color: var(--green-dark);
@@ -36,29 +39,128 @@ body {
 .text-gray {
     color: var(--gray);
 }
+h1 {
+    text-align: center;
+    font-size: min(8vw, 40px);
+    margin: 30px;
+}
 
 
 
 /*********** NavBar **********/
+.top-navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 10px;
+    align-items: center;
+    
+}
 .logo {
     font-size: 20px;
 }
 .icon-navbar {
     width: 40px;
     height: 40px;
-    margin: 10px, ;
+    margin: 10px 15px;
+}
+.hidden {
+    display: none;
+}
+
+/****** Menu Burger ********/
+.line-menu-burger {
+    display: block;
+width: 40px;
+height: 2px;
+margin: 10px 10px;
+border-radius: 15px;
+}
+.menu-mobile {
+    padding-bottom: 20px;
+}
+.nav-item-mobile {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin: 10px 30px;
+}
+/***** responsive navbar ******/
+@media (min-width:1000px){
+.button-menu-burger {
+    display: none;
+}
+.menu-desktop {
+    display: flex;
+
+}
 }
 
 /*********** btn **********/
 .nav-link {
-    border-radius: 10px;
     color: var(--green-light);
     font-size: 15px;
-    padding: 10px 40px;
+    padding: 10px 2vw;
+    border-radius: 10px;
+}
+
+/*********** home Page **********/
+.bloc-home-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.img-bloc-home-page {
+    width: 100%;
+}
+
+
+.btn-bloc {
+    top: 250px; 
+    text-align: center;
+    font-size: min(3vw, 20px);;
+    width: min(70%, 400px) ;
+    border-radius: 12px;
+    padding: 5px 5px;
+    margin-top: -20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.cta {
+    font-size: min(2.5vw, 15px);
+    text-decoration: underline;
+}
+.text-for-desktop {
+    display: none;
+    font-size: 15px;
+    
+}
+
+@media (min-width:800px){
+section {
+        margin: 0 10px;
+    }
+
+.img-bloc-home-page {
+    width: 40%;
+}
+.bloc-home-page {
+    flex-direction: row;
+}
+.text-for-desktop {
+    display: contents;
+    margin: 0px 30px ;
+}
+.btn-bloc {
+    z-index: -1;
+    margin-left: -10px;
 
 }
-.select {
-    background-color: var(--green-light);
-    color: var(--green-dark);
 }
+    
+
+
 
