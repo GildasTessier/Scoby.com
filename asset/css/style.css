@@ -105,19 +105,47 @@ border-radius: 15px;
     border-color: var(--green-light);
     text-decoration: underline;
     text-underline-position: under;
-  
- 
+}
+.active {
+    background-color: var(--green-light);
+    color: var(--green-dark);
 }
 
-/***** responsive navbar ******/
-@media (min-width:1000px){
-.button-menu-burger {
-    display: none;
-}
-.menu-desktop {
+/*********************  Footer ********************/
+footer {
     display: flex;
-
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0px 10px;
+    align-items: center;
+    
 }
+.links-footer {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    align-items: center;
+    padding-top: 20px;
+    
+}
+.links-pages-footer {
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 30px;
+    
+}
+.links-legales-footer {
+    font-size: 10px;
+    padding-bottom: 15px;
+ 
+    
+}
+.link-footer {
+    padding: 10px 30px;
+    text-decoration: underline;
+    text-underline-position: under;
 }
 
 
@@ -157,55 +185,71 @@ border-radius: 15px;
 .cta {
     font-size: min(2.5vw, 15px);
     text-decoration: underline;
+    text-underline-position: under;
 }
 .text-for-desktop {
     display: none;
     font-size: 15px;
     
 }
+
+/****************** Responsive ******************/
 /***** responsive home Page ******/
 @media (min-width:805px){
-section {
+    section {
         margin: 0 10px;
     }
-
-.img-bloc-home-page {
-    width: 350px;
-}
-.bloc-home-page {
-    flex-direction: row;
-    justify-content: center;
-    margin: 0px 10px 50px 10px;
-
-}
-.text-for-desktop {
-    display: flex;
-    margin: 10px 10px ;
-    line-height: 16px;
-}
-.goup-text-home-page {
-    z-index: -1;
-    margin: 0px 0px 0px -10px;
-    /* height: 27vh; */
-    height: 215px;
-
-
-    padding: 0px 20px;
-
-
-}
+    
+    .img-bloc-home-page {
+        width: 350px;
+    }
+    .bloc-home-page {
+        flex-direction: row;
+        justify-content: center;
+        margin: 0px 10px 50px 10px;
+        
+    }
+    .text-for-desktop {
+        display: flex;
+        margin: 10px 10px ;
+        line-height: 16px;
+    }
+    .goup-text-home-page {
+        z-index: -1;
+        margin: 0px 0px 0px -10px;
+        /* height: 27vh; */
+        height: 215px;
+        
+        
+        padding: 0px 20px;
+        
+        
+    }
 }
 
 @media (min-width:1300px){ 
-.goup-text-home-page {
-    width: 240px;
-}
-.text-for-desktop, .cta {
-    font-size: 12px;
-    
-}
+    .goup-text-home-page {
+        width: 240px;
+    }
+    .text-for-desktop, .cta {
+        font-size: 12px;
+        
+    }
 }
 
+@media (min-width:1000px){
+    /***** responsive navbar ******/
+.button-menu-burger {
+    display: none;
+}
+.menu-desktop {
+    display: flex;
+}
+    /***** responsive footer ******/
+    .links-pages-footer {
+        flex-direction: row;
+        }
+}
 
 
 
