@@ -47,7 +47,7 @@ h1 {
 
 
 
-/*********** NavBar **********/
+/********************* NavBar ********************/
 .top-navbar {
     display: flex;
     flex-direction: row;
@@ -83,8 +83,32 @@ border-radius: 15px;
     display: flex;
     text-align: center;
     align-items: center;
-    margin: 10px 30px;
+    margin: 30px 30px;
 }
+.nav-link-mobile {
+    font-size: 20px;
+
+}
+/*********** btn **********/
+.nav-link {
+    color: var(--green-light);
+    padding: 10px 2vw;
+    border-radius: 10px;
+}
+.nav-link-desktop {
+    font-size: 15px;
+
+}
+/***** animation navbar ******/
+.nav-link:hover {
+    border: 1px solid ;
+    border-color: var(--green-light);
+    text-decoration: underline;
+    text-underline-position: under;
+  
+ 
+}
+
 /***** responsive navbar ******/
 @media (min-width:1000px){
 .button-menu-burger {
@@ -96,20 +120,21 @@ border-radius: 15px;
 }
 }
 
-/*********** btn **********/
-.nav-link {
-    color: var(--green-light);
-    font-size: 15px;
-    padding: 10px 2vw;
-    border-radius: 10px;
-}
 
-/*********** home Page **********/
+/********************* home Page ********************/
+
+.main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 .bloc-home-page {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 50px;
+    
 }
 
 .img-bloc-home-page {
@@ -117,11 +142,11 @@ border-radius: 15px;
 }
 
 
-.btn-bloc {
+.goup-text-home-page {
     top: 250px; 
     text-align: center;
     font-size: min(3vw, 20px);;
-    width: min(70%, 400px) ;
+    width: min(625px, 70%) ;
     border-radius: 12px;
     padding: 5px 5px;
     margin-top: -20px;
@@ -138,29 +163,49 @@ border-radius: 15px;
     font-size: 15px;
     
 }
-
-@media (min-width:800px){
+/***** responsive home Page ******/
+@media (min-width:805px){
 section {
         margin: 0 10px;
     }
 
 .img-bloc-home-page {
-    width: 40%;
+    width: 350px;
 }
 .bloc-home-page {
     flex-direction: row;
+    justify-content: center;
+    margin: 0px 10px 50px 10px;
+
 }
 .text-for-desktop {
-    display: contents;
-    margin: 0px 30px ;
+    display: flex;
+    margin: 10px 10px ;
+    line-height: 16px;
 }
-.btn-bloc {
+.goup-text-home-page {
     z-index: -1;
-    margin-left: -10px;
+    margin: 0px 0px 0px -10px;
+    /* height: 27vh; */
+    height: 215px;
+
+
+    padding: 0px 20px;
+
 
 }
 }
+
+@media (min-width:1300px){ 
+.goup-text-home-page {
+    width: 240px;
+}
+.text-for-desktop, .cta {
+    font-size: 12px;
     
+}
+}
+
 
 
 
