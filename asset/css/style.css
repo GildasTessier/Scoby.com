@@ -151,7 +151,7 @@ footer {
 
 /********************* home Page ********************/
 
-.main {
+section {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
