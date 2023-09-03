@@ -164,6 +164,9 @@ footer {
     margin-bottom: 50px;
     
 }
+.img-tablet, .img-desktop {
+    display: none;
+}
 
 .img-bloc-home-page {
     width: 100%;
@@ -195,14 +198,30 @@ footer {
 
 /****************** Responsive ******************/
 /***** responsive home Page ******/
+@media (min-width:500px){
+    .img-mobile {
+        display: none;
+    }
+    .img-tablet {
+        display: block;
+    }
+}
+
+
+
 @media (min-width:805px){
-    section {
+    main {
         margin: 0 10px;
     }
-    
-    .img-bloc-home-page {
+    .img-tablet {
+        display: none;
+    }
+    .img-desktop {
+        display: block;
         width: 350px;
     }
+    /* .img-bloc-home-page {
+    } */
     .bloc-home-page {
         flex-direction: row;
         justify-content: center;
