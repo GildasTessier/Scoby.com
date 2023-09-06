@@ -4,7 +4,7 @@
         "name": "Classic",
         "class": "Classic",
         "composition": "Thé Noir - Thé Vert - Cassonade",
-        "sizes": ["33 cl", "75 cl"],
+        "sizes": ["33", "75"],
         "prices": [3, 6]
     },
     {
@@ -12,7 +12,7 @@
         "name": "Hibiscus",
         "class": "Les Florales",
         "composition": "Thé Noir - Thé Vert - Cassonade - Hibiscus",
-        "sizes": ["33 cl", "75 cl"],
+        "sizes": ["33", "75"],
         "prices": [4, 8]
     },
     {
@@ -20,7 +20,7 @@
         "name": "Menthe",
         "class": "Les Florales",
         "composition": "Thé Noir - Thé Vert - Cassonade - Menthe verte",
-        "sizes": ["33 cl", "75 cl"],
+        "sizes": ["33", "75"],
         "prices": [4, 8]
     },
     {
@@ -28,7 +28,7 @@
         "name": "Violette",
         "class": "Les Florales",
         "composition": "Thé Noir - Thé Vert - Cassonade - Violette",
-        "sizes": ["33 cl", "75 cl"],
+        "sizes": ["33", "75"],
         "prices": [4, 8]
     },
     {
@@ -36,7 +36,7 @@
         "name": "Pomme",
         "class": "Les Fruités",
         "composition": "Thé Noir - Thé Vert - Cassonade - Pommes",
-        "sizes": ["33 cl", "75 cl"],
+        "sizes": ["33", "75"],
         "prices": [3, 6]
     },
     {
@@ -44,7 +44,7 @@
         "name": "Fraise",
         "class": "Les Fruités",
         "composition": "Thé Noir - Thé Vert - Cassonade - Fraises",
-        "sizes": ["33 cl", "75 cl"],
+        "sizes": ["33", "75"],
         "prices": [3, 6]
     }
 ]

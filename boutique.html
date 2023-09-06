@@ -58,6 +58,9 @@
         <div class="goup-text-home-page bg-green-dark text-green-light">
           <h2 class="text-green-light">Classique</h2>
         </div>
+        <ul class="products-classic" id="ProductsClassic">
+
+        </ul>
         
         
         
@@ -91,28 +94,28 @@
     </footer>
 
 
-    <template class="js-template-product">
-      <div class="article">
+    <template id="productTemplate">
+      <li class="article">
         <div class="acticle-name-comp">
           <p class="article-name">Nom</p>
           <p class="article-comp text-green-dark">composition boisson</p> 
         </div>
         <select class="bg-green-light article-choice-content">
-          <option>0 cl</option>
-          <option>0 cl</option>
+          <option class="opt-size-1">0 cl</option>
+          <option class="opt-size-2">0 cl</option>
           
         </select>
         <p class="article-price">0,00€</p>
-        <div class="article-sizing-button bg-green-light" id="btnMoreLessProtucts">
+        <div class="article-sizing-button bg-green-light js-btnMoreLessProtucts" id="btnMoreLessProtucts">
           <button class="decrease-botton" > - </button>
           <p class="nb-increase js-nb-products">0</p>
           <button class="increase-botton js-increase"> + </button>
         </div>
         <button class="article-add-article bg-green-dark text-green-light">Ajouter<br>au panier</button>
-      </div>
+      </li>
     </template>
 
-    
+
       <script src="/asset/js/script.js"></script>       
     </body>
     </html>
