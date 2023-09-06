@@ -2,6 +2,7 @@
     --green-dark : #40604D;
     --green-light : #A4AD9C;
     --gray : #D8D8D8;
+    --black : #0E0E0E;
 
 }
 
@@ -39,7 +40,15 @@ body {
 .text-gray {
     color: var(--gray);
 }
+.text-black {
+    color: var(--black)
+}
 h1 {
+    text-align: center;
+    font-size: min(8vw, 40px);
+    margin: 30px;
+}
+.logo {
     text-align: center;
     font-size: min(8vw, 40px);
     margin: 30px;
@@ -178,9 +187,10 @@ section {
     text-align: center;
     font-size: min(3vw, 20px);;
     width: min(625px, 70%) ;
+    height: min(40px);
     border-radius: 12px;
     padding: 5px 5px;
-    margin-top: -20px;
+    margin-top: -25px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -193,7 +203,74 @@ section {
 .text-for-desktop {
     display: none;
     font-size: 15px;
+}
+
+/********************* Boutique Page ********************/
+.article button {
+    border: none;
+}
+.article {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-between;
+    align-items: center;
+    width: 350px;
+    padding: 30px 0;
+    height: 120px;
+    border-bottom: solid 1px var(--green-light);
+}
+.article-name {
+    font-size: 25px;
     
+}
+.article-comp {
+    font-size: 12px;
+    width: max 100px;
+    
+}
+.article-choice-content {
+    font-size: 15px;
+    border: var(--green-light); border-radius: 3px;
+    font-family: 'comfortaa-light';
+    margin: 0 25px;
+    padding: 10px;
+
+}
+.article-price {
+    font-size: 20px;
+    /* padding-top: 10px; */
+}
+.article-sizing-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: solid 2px var(--green-light);
+    border-radius: 3px;
+    height: 30px;
+}
+.decrease-botton {
+    border: 3px solid var(--green-light);
+    border-radius: 1px 0 0 1px;
+    height: 30px;
+    width: 30px;
+}
+.nb-increase {
+    padding: 0 25px;
+}
+
+.increase-botton {
+    border: 3px solid var(--green-light);
+    border-radius: 0 1px 1px 0;
+    height: 30px;
+    width: 30px;
+}
+.article-add-article {
+    border-radius: 3px;
+    font-family: 'comfortaa-light';
+    font-size: 15px;
+    padding: 10px;
 }
 
 /****************** Responsive ******************/
