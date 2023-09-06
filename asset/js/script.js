@@ -17,10 +17,11 @@ async function waiting () {
 waiting()
 .then(displayProducts);
 
+// for display all products in page
 function displayProducts(products) {
     document.getElementById('ProductsClassic').append(...products.map(createProduct));
 }
-
+// For create element product
 function createProduct(produit) {
     const blocProduct = document.importNode(document.getElementById('productTemplate').content, true);
     blocProduct.querySelector('.article-name').textContent = produit.name;
