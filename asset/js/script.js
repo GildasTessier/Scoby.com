@@ -4,9 +4,17 @@ document.querySelector("#button-menu-burger").addEventListener("click", () => {
 });
 
 //For Increase/Decrease nb products to add
-let count = 0
-document.querySelector('#btnMoreLessProtucts').addEventListener('click', (event) => {
-    event.target.classList.contains('js-increase') ? count += 1 : count -= 1;
-    if (count < 0 ) count = 0;
-    document.querySelector('.js-nb-products').innerText = count;
-})
+// let count = 0
+// document.querySelector('#btnMoreLessProtucts').addEventListener('click', (event) => {
+//     event.target.classList.contains('js-increase') ? count += 1 : count -= 1;
+//     if (count < 0 ) count = 0;
+//     document.querySelector('.js-nb-products').innerText = count;
+// })
+
+async function waiting () {
+    const responce = await fetch("/datas/products.json");
+    const data = await responce.json();
+    console.log(data);
+
+}
+waiting();
