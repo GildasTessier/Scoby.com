@@ -5,7 +5,7 @@
         "class": "Classic",
         "composition": "Thé Noir - Thé Vert - Cassonade",
         "sizes": ["33", "75"],
-        "prices": [3, 6]
+        "prices": [3.50, 6.00]
     },
     {
         "id": 2,
