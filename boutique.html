@@ -51,14 +51,12 @@
 
       <h1 class="text-green-dark">Nos Produits</h1>
 
-      <section class="bloc-home-page bloc-section-boutique">
-        <img class="img-bloc-home-page img-mobile" src="/asset/img/img-mobile/img-Touslesgouts.jpeg">
-        <img class="img-bloc-home-page img-tablet" src="/asset/img/img-tablet/img-Touslesgouts.jpeg">
-        <img class="img-bloc-home-page img-desktop" src="/asset/img/img-desktop/img-Touslesgouts.jpeg">
-        <div class="goup-text-home-page bg-green-dark text-green-light">
-          <h2 class="text-green-light">Classique</h2>
-        </div>
-        <ul class="products-classic" id="ProductsClassic">
+      <section class="section-boutique">
+
+       
+            <h2 class="title-section-boutique text-green-light bg-green-dark">Classique</h2>
+
+        <ul class="ul-products products-classic" id="ProductsClassic">
 
         </ul>
         
@@ -96,18 +94,20 @@
 
     <template id="productTemplate">
       <li class="article">
-        <div class="acticle-name-comp">
-          <p class="article-name">Nom</p>
-          <p class="article-comp text-green-dark">composition boisson</p> 
-        </div>
-        <select class="bg-green-light article-choice-content">
-          <option class="js-opt-size opt-size-1" value="1">0 cl</option>
-          <option class="js-opt-size opt-size-2"" value="2">0 cl</option>
-          
-        </select>
-        <p class="article-price-opt1">0,00€</p>
-        <p class="article-price-opt2 hidden">0,00€</p>
-        <div class="article-sizing-button bg-green-light js-btnMoreLessProtucts" id="btnMoreLessProtucts">
+
+          <div class="acticle-name-comp">
+            <p class="article-name">Nom</p>
+            <p class="article-comp text-green-dark">composition boisson</p> 
+          </div>
+          <select class="bg-green-light article-choice-content">
+            <option class="js-opt-size opt-size-1" value="1">0 cl</option>
+            <option class="js-opt-size opt-size-2"" value="2">0 cl</option>
+            
+          </select>
+          <p class="article-price-opt1">0,00€</p>
+          <p class="article-price-opt2 hidden">0,00€</p>
+
+          <div class="article-sizing-button bg-green-light js-btnMoreLessProtucts" id="btnMoreLessProtucts">
           <button class="decrease-botton" > - </button>
           <p class="nb-increase js-nb-products">0</p>
           <button class="increase-botton js-increase"> + </button>
