@@ -18,6 +18,7 @@ waiting()
 .then(displayProducts)
 .then(getIncreaseDecreaseAtAll)
 .then(DisplayPriceByOptionSize)
+.then(addProductInOrder)
 
 // for display all products in page
 function displayProducts(products) {
@@ -67,3 +68,19 @@ function DisplayPriceByOptionSize () {
             }
         })
     })}
+
+
+// For create table to order
+let tabOrderCustomer =[]
+function addProductInOrder () {
+    document.querySelectorAll('.article').forEach(btn => {
+        btn.addEventListener('click', function (event)  {
+             if (!event.target.classList.contains('article-add-article')) return;
+            if (!tabOrderCustomer[this.querySelector('.article-name').innerText]){
+                tabOrderCustomer[this.querySelector('.article-name').innerText] = {"qty": 0, "size": 0, "priceProduct": 0, "totalPrice": 0};
+            } 
+            tabOrderCustomer[this.querySelector('.article-name').innerText].qty += parseInt(this.querySelector('.nb-increase').innerText);
+
+        })
+    })
+}
