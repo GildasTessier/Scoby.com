@@ -15,7 +15,8 @@ async function waiting () {
     
 }
 waiting()
-.then(displayProducts);
+.then(displayProducts)
+.then(getIncreaseDecreaseAtAll)
 
 // for display all products in page
 function displayProducts(products) {
@@ -33,9 +34,18 @@ function createProduct(produit) {
     return blocProduct;
 }
 // For Increase/Decrease nb products to add
-// let count = 0
-// document.querySelector('.js-btnMoreLessProtucts').addEventListener('click', (event) => {
-//     event.target.classList.contains('js-increase') ? count += 1 : count -= 1;
-//     if (count < 0 ) count = 0;
-//     document.querySelector('.js-nb-products').innerText = count;
-// })
+function getIncreaseDecrease (object) {
+    let count = 0
+    object.addEventListener('click', function(event) {
+            event.target.classList.contains('js-increase') ? count += 1 : count -= 1;
+            if (count < 0 ) count = 0;
+            this.querySelector('.js-nb-products').innerText = count;
+        }) 
+    }
+
+// For play function Increase/Decrease at all 
+function getIncreaseDecreaseAtAll () {
+    document.querySelectorAll('.js-btnMoreLessProtucts').forEach(element => {
+        getIncreaseDecrease(element);
+    });
+}
