@@ -76,10 +76,21 @@ function addProductInOrder () {
     document.querySelectorAll('.article').forEach(btn => {
         btn.addEventListener('click', function (event)  {
              if (!event.target.classList.contains('article-add-article')) return;
-            if (!tabOrderCustomer[this.querySelector('.article-name').innerText]){
-                tabOrderCustomer[this.querySelector('.article-name').innerText] = {"qty": 0, "size": 0, "priceProduct": 0, "totalPrice": 0};
-            } 
-            tabOrderCustomer[this.querySelector('.article-name').innerText].qty += parseInt(this.querySelector('.nb-increase').innerText);
+             if (!tabOrderCustomer[this.querySelector('.article-name').innerText]){
+                 tabOrderCustomer[this.querySelector('.article-name').innerText] = {"size": 0, "qty": 0, "priceProduct": 0, "totalPrice": 0};
+                } 
+            let nameProduct = tabOrderCustomer[this.querySelector('.article-name').innerText]
+
+            nameProduct.qty += parseInt(this.querySelector('.nb-increase').innerText);
+            nameProduct.size = this.querySelector('.article-choice-content').options[this.querySelector('.article-choice-content').selectedIndex].innerText;
+
+            if (this.querySelector('.article-choice-content').options[this.querySelector('.article-choice-content').selectedIndex].value === '1') {
+               nameProduct.priceProduct = this.querySelector('.article-price-opt1').innerText
+            }
+            else {
+               nameProduct.priceProduct = this.querySelector('.article-price-opt2').innerText
+            }
+           nameProduct.totalPrice = nameProduct.qty * parseInt(nameProduct.priceProduct) + '€'
 
         })
     })
