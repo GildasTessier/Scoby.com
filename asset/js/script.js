@@ -69,10 +69,9 @@ function DisplayPriceByOptionSize () {
         })
     })}
 
-
 // For create table to order
-let tabOrderCustomer =[]
 function addProductInOrder () {
+    let tabOrderCustomer = window.sessionStorage.getItem("tabOrderCustomer") ? JSON.parse(window.sessionStorage.getItem("tabOrderCustomer")) : {};
     document.querySelectorAll('.article').forEach(btn => {
         btn.addEventListener('click', function (event)  {
              if (!event.target.classList.contains('article-add-article')) return;
@@ -93,6 +92,9 @@ function addProductInOrder () {
             }
            nameProduct.totalPrice = nameProduct.qty * parseInt(nameProduct.priceProduct) + '€'
             console.table(tabOrderCustomer);
+
+            window.sessionStorage.setItem("tabOrderCustomer", JSON.stringify(tabOrderCustomer));
+ 
         })
     })
 }
