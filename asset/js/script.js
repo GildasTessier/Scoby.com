@@ -39,7 +39,7 @@ function createProduct(produit) {
 }
 // For Increase/Decrease nb products to add
 function getIncreaseDecrease (object) {
-    let count = 0
+    let count = 1
     object.addEventListener('click', function(event) {
             event.target.classList.contains('js-increase') ? count += 1 : count -= 1;
             if (count < 0 ) count = 0;
