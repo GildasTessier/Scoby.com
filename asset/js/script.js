@@ -2,6 +2,11 @@
 document.querySelector("#button-menu-burger").addEventListener("click", () => {
     document.querySelector("#menu-mobile").classList.toggle("hidden");
 });
+document.querySelector("#picto-panier").addEventListener("click", () => {
+    document.querySelector("#tab-order").classList.toggle("hidden");
+    
+    
+});
 
 
 async function waiting () {
@@ -19,6 +24,8 @@ waiting()
 .then(getIncreaseDecreaseAtAll)
 .then(DisplayPriceByOptionSize)
 .then(addProductInOrder)
+.then(displayOrderCustomer ())
+
 
 // for display all products in page
 function displayProducts(products) {
@@ -39,13 +46,13 @@ function createProduct(produit) {
 }
 // For Increase/Decrease nb products to add
 function getIncreaseDecrease (object) {
-    let count = 1
     object.addEventListener('click', function(event) {
-            event.target.classList.contains('js-increase') ? count += 1 : count -= 1;
-            if (count < 0 ) count = 0;
-            this.querySelector('.js-nb-products').innerText = count;
-        }) 
-    }
+        let count =  parseInt(event.target.closest('.article').querySelector('.js-nb-products').innerText)
+        event.target.classList.contains('js-increase') ? count += 1 : count -= 1;
+        if (count < 0 ) count = 0;
+        this.querySelector('.js-nb-products').innerText = count;
+    }) 
+}
 
 // For play function Increase/Decrease at all 
 function getIncreaseDecreaseAtAll () {
@@ -94,7 +101,20 @@ function addProductInOrder () {
             console.table(tabOrderCustomer);
 
             window.sessionStorage.setItem("tabOrderCustomer", JSON.stringify(tabOrderCustomer));
- 
+
+            event.target.closest('.article').querySelector('.js-nb-products').innerText = '1'
+            displayOrderCustomer()
         })
     })
 }
+//For display order list in menu order
+function displayOrderCustomer () {
+    let tab = JSON.parse(window.sessionStorage.getItem("tabOrderCustomer"))
+    let values = ''
+    for (let i in tab) {
+        values += `<div> ${i} x ${tab[i].qty} = ${tab[i].totalPrice}</div>`
+    }
+    document.querySelector('#tab-order').innerHTML = values
+}
+
+
