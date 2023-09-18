@@ -83,11 +83,39 @@ h1 {
 }
 /****** tab Order ********/
 .tab-order {
-    background-color: red;
-    width: 500px;
-    height: 500px;
+    background-color: var(--green-dark);
+    width: 320px;
     position: absolute;
     top: 80px; right: 0px;
+}
+.line-product-order, .title-order-customer, .line-total-price {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 5px;
+    padding: 10px 5px ;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+
+.name-product, .title-name {
+    width: 50%;
+}
+.nb-product, .title-qty {
+    width: 25%;
+    text-align: center;
+}
+.total-price-product, .title-total {
+    width: 25%;
+    text-align: end;
+}
+.title-total-prise {
+    width: 75%;
+    text-align: end;
+}
+.total-price {
+    width: 25%;
+    text-align: end;
 }
 
 /****** Menu Burger ********/

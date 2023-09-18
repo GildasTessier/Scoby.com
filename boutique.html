@@ -37,7 +37,18 @@
               alt="picto pannier"></a>
         </div>
         <div id="tab-order" class="tab-order hidden">
+          <div class="title-order-customer">
+            <p class="title-name text-green-light">Article</p>
+            <p class="title-qty text-green-light">Nb</p>
+            <p class="title-total text-green-light">Total</p>
+          </div>
+        <div class="tab-order-for-template"> 
         </div>
+        
+      <div class="line-total-price">
+        <p class="title-total-prise text-green-light">Prix total :</p>
+        <p class="total-price text-green-light">0,00€</p>
+      </div>
       </div>
       <ul class="hidden menu-mobile text-green-light" id="menu-mobile">
         <li class="nav-item nav-item-mobile"><a class="nav-link nav-link-mobile" href="/index.html">Accueil</a></li>
@@ -126,6 +137,14 @@
       </div>
       <button class="article-add-article bg-green-dark text-green-light">Ajouter<br>au panier</button>
     </li>
+  </template>
+
+  <template id="product-order-template" class="product-order-template">
+    <div class="line-product-order bg-green-light">
+      <p class="name-product text-green-dark">name</p>
+      <p class="nb-product text-green-dark">0</p>
+      <p class="total-price-product text-green-dark">0,00€</p>
+    </div>
   </template>
 
 

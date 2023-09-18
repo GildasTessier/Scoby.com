@@ -108,13 +108,26 @@ function addProductInOrder () {
     })
 }
 //For display order list in menu order
+// function displayOrderCustomer () {
+//     let tab = JSON.parse(window.sessionStorage.getItem("tabOrderCustomer"))
+//     let values = ''
+//     for (let i in tab) {
+//         values += `<div class"text-green-dark"> ${i} x ${tab[i].qty} = ${tab[i].totalPrice}</div>`
+//     }
+//     document.querySelector('#tab-order').innerHTML = values
+// }
 function displayOrderCustomer () {
+    document.querySelector('.tab-order-for-template').innerHTML = ''
     let tab = JSON.parse(window.sessionStorage.getItem("tabOrderCustomer"))
-    let values = ''
+    let totalPrice = 0
     for (let i in tab) {
-        values += `<div> ${i} x ${tab[i].qty} = ${tab[i].totalPrice}</div>`
-    }
-    document.querySelector('#tab-order').innerHTML = values
+const blocOrderCustomer = document.importNode(document.getElementById('product-order-template').content, true);
+blocOrderCustomer.querySelector('.name-product').textContent = i;
+blocOrderCustomer.querySelector('.nb-product').textContent = tab[i].qty;
+blocOrderCustomer.querySelector('.total-price-product').textContent = tab[i].totalPrice;
+document.querySelector('.tab-order-for-template').append(blocOrderCustomer)
+totalPrice += parseInt(tab[i].totalPrice)
+document.querySelector('.total-price').textContent = totalPrice + `€`
 }
-
+}
 
