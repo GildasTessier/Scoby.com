@@ -3,9 +3,7 @@ document.querySelector("#button-menu-burger").addEventListener("click", () => {
     document.querySelector("#menu-mobile").classList.toggle("hidden");
 });
 document.querySelector("#picto-panier").addEventListener("click", () => {
-    document.querySelector("#tab-order").classList.toggle("hidden");
-    
-    
+    document.querySelector("#tab-order").classList.toggle("hidden");  
 });
 
 
@@ -130,7 +128,7 @@ document.querySelector('.tab-order-for-template').append(blocOrderCustomer)
 totalPrice += parseInt(tab[i].totalPrice)
 nbProducts += parseInt(tab[i].qty)
 document.querySelector('.total-price').textContent = totalPrice + `€`
-document.querySelector('.count-order').textContent = nbProducts 
+document.querySelector('.count-order').textContent = nbProducts
 }
 }
 

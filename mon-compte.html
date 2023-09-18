@@ -8,44 +8,63 @@
     <link rel="stylesheet" href="/asset/css/style.css">
 </head>
 <body>
-    <header>
-          
-      <nav class="nav-bar bg-green-dark">
-      <div class="top-navbar">
-        <div class="button-menu-burger bg-green-dark" id="button-menu-burger"> 
-          <span class="line-menu-burger ligne-top bg-green-light"></span>
-          <span class="line-menu-burger ligne-middle bg-green-light"></span>
-          <span class="line-menu-burger ligne-botom bg-green-light"></span>
-        </div>
-        <div class="logo text-green-light">Scoby.com</div>
-        <ul class=" menu-desktop hidden text-green-light">
-          <li class="nav-item nav-item-desktop"><a class="nav-link nav-link-desktop" href="/index.html">Accueil</a></li>
-          <li class="nav-item nav-item-desktop"><a class="nav-link nav-link-desktop" href="/boutique.html">Boutique</a></li>
-          <li class="nav-item nav-item-desktop"><a class="nav-link nav-link-desktop" href="/Fabrication.html">Fabrication</a></li>
-          <li class="nav-item nav-item-desktop"><a class="nav-link nav-link-desktop" href="/a-propos.html">A popos / Nous contacter</a></li>
-          <li class="nav-item nav-item-desktop"><a class="nav-link nav-link-desktop active" href="/mon-compte.html">Mon compte</a></li>
-        </ul>
-        <div>
-          <!-- <a class="hidden" href="#"><img class="icon-navbar" src="asset/img/Icons/referer (1).png" alt="picto to connect"></a> -->
-          <a class="navbar-icon" href="#"><img class="icon-navbar" src="asset/img/Icons/boissons (1).png" alt="picto pannier"></a>
-        </div>
-      </div>
-        <ul class="hidden menu-mobile text-green-light" id="menu-mobile">
-          <li class="nav-item nav-item-mobile"><a class="nav-link nav-link-mobile" href="/index.html">Accueil</a></li>
-          <li class="nav-item nav-item-mobile"><a class="nav-link nav-link-mobile" href="/boutique.html">Boutique</a></li>
-          <li class="nav-item nav-item-mobile"><a class="nav-link nav-link-mobile" href="/Fabrication.html">Fabrication</a></li>
-          <li class="nav-item nav-item-mobile"><a class="nav-link nav-link-mobile" href="/a-propos.html">A popos / Nous contacter</a></li>
-          <li class="nav-item nav-item-mobile"><a class="nav-link nav-link-mobile" href="mon-compte.html">Mon compte</a></li>
-          <li class="nav-item nav-item-mobile"><a class="nav-link nav-link-mobile active" href="#">Déconnexion</a></li>
-        </ul>
-    </nav>
+    
+      <header>
 
-
-
-
-
-
-    </header>
+        <nav class="nav-bar bg-green-dark">
+          <div class="top-navbar">
+            <div class="button-menu-burger bg-green-dark" id="button-menu-burger">
+              <span class="line-menu-burger ligne-top bg-green-light"></span>
+              <span class="line-menu-burger ligne-middle bg-green-light"></span>
+              <span class="line-menu-burger ligne-botom bg-green-light"></span>
+            </div>
+            <div class="logo text-green-light">Scoby.com</div>
+            <ul class=" menu-desktop hidden text-green-light">
+              <li class="nav-item nav-item-desktop"><a class="nav-link nav-link-desktop" href="/index.html">Accueil</a></li>
+              <li class="nav-item nav-item-desktop"><a class="nav-link nav-link-desktop "
+                  href="/boutique.html">Boutique</a></li>
+              <li class="nav-item nav-item-desktop"><a class="nav-link nav-link-desktop"
+                  href="/Fabrication.html">Fabrication</a></li>
+              <li class="nav-item nav-item-desktop"><a class="nav-link nav-link-desktop" href="/a-propos.html">A popos /
+                  Nous contacter</a></li>
+              <li class="nav-item nav-item-desktop"><a class="nav-link nav-link-desktop active" href="/mon-compte.html">Mon
+                  compte</a></li>
+            </ul>
+            <div>
+              <!-- <a class="hidden" href="#"><img class="icon-navbar" src="asset/img/Icons/referer (1).png" alt="picto to connect"></a> -->
+              <a id="picto-panier" class="navbar-icon" href="#"><img class="icon-navbar" src="asset/img/Icons/boissons (1).png"
+                alt="picto pannier"></a>
+                <p class="count-order bg-green-light text-green-dark ">0</p>
+              </div>
+              <div id="tab-order" class="tab-order hidden">
+                <div class="title-order-customer">
+                  <p class="title-name text-green-light">Article</p>
+                  <p class="title-qty text-green-light">Nb</p>
+                  <p class="title-total text-green-light">Total</p>
+                </div>
+                <div class="tab-order-for-template"> 
+                </div>
+                
+                <div class="line-total-price">
+                  <p class="title-total-prise text-green-light">Prix total :</p>
+                  <p class="total-price text-green-light">0,00€</p>
+                </div>
+              </div>
+            </div>
+          <ul class="hidden menu-mobile text-green-light" id="menu-mobile">
+            <li class="nav-item nav-item-mobile"><a class="nav-link nav-link-mobile" href="/index.html">Accueil</a></li>
+            <li class="nav-item nav-item-mobile"><a class="nav-link nav-link-mobile"
+                href="/boutique.html">Boutique</a></li>
+            <li class="nav-item nav-item-mobile"><a class="nav-link nav-link-mobile"
+                href="/Fabrication.html">Fabrication</a></li>
+            <li class="nav-item nav-item-mobile"><a class="nav-link nav-link-mobile" href="/a-propos.html">A popos / Nous
+                contacter</a></li>
+            <li class="nav-item nav-item-mobile"><a class="nav-link nav-link-mobile active" href="mon-compte.html">Mon compte</a>
+            </li>
+            <li class="nav-item nav-item-mobile"><a class="nav-link nav-link-mobile" href="#">Déconnexion</a></li>
+          </ul>
+        </nav>
+      </header>
     <main>
 
       <h1 class="text-green-dark">Mon compte</h1>
@@ -68,6 +87,13 @@
           </div>
       </div>
     </footer>
-      <script src="/asset/js/script.js"></script>       
+    <template id="product-order-template" class="product-order-template">
+      <div class="line-product-order bg-green-light">
+        <p class="name-product text-green-dark">name</p>
+        <p class="nb-product text-green-dark">0</p>
+        <p class="total-price-product text-green-dark">0,00€</p>
+      </div>
+    </template>     
+    <script src="/asset/js/script.js"></script>  
     </body>
     </html>

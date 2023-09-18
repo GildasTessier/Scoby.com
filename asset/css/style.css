@@ -339,11 +339,19 @@ footer {
     height: 30px;
     width: 30px;
 }
+.increase-botton:active, .decrease-botton:active {
+    background-color: var(--green-light);
+    color: var(--gray);
+}
 .article-add-article {
     border-radius: 3px;
     font-family: 'comfortaa-light';
     font-size: 15px;
     padding: 10px;
+}
+.article-add-article:active{
+    background-color: var(--green-light);
+    color: var(--green-dark);
 }
 
 /****************** Responsive ******************/
