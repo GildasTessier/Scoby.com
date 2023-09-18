@@ -87,13 +87,14 @@ h1 {
     width: 320px;
     position: absolute;
     top: 80px; right: 0px;
+    
 }
 .line-product-order, .title-order-customer, .line-total-price {
     display: flex;
     flex-direction: row;
     margin: 10px 5px;
     padding: 10px 5px ;
-    font-size: 20px;
+    font-size: 15px;
     border-radius: 5px;
 }
 
@@ -116,6 +117,19 @@ h1 {
 .total-price {
     width: 25%;
     text-align: end;
+}
+.count-order {
+    position: absolute;
+    right: 28px;
+    top: 50px;
+    border-radius: 50px;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15px;
+    height: 15px;
+    
 }
 
 /****** Menu Burger ********/

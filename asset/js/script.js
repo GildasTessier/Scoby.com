@@ -120,6 +120,7 @@ function displayOrderCustomer () {
     document.querySelector('.tab-order-for-template').innerHTML = ''
     let tab = JSON.parse(window.sessionStorage.getItem("tabOrderCustomer"))
     let totalPrice = 0
+    let nbProducts = 0
     for (let i in tab) {
 const blocOrderCustomer = document.importNode(document.getElementById('product-order-template').content, true);
 blocOrderCustomer.querySelector('.name-product').textContent = i;
@@ -127,7 +128,9 @@ blocOrderCustomer.querySelector('.nb-product').textContent = tab[i].qty;
 blocOrderCustomer.querySelector('.total-price-product').textContent = tab[i].totalPrice;
 document.querySelector('.tab-order-for-template').append(blocOrderCustomer)
 totalPrice += parseInt(tab[i].totalPrice)
+nbProducts += parseInt(tab[i].qty)
 document.querySelector('.total-price').textContent = totalPrice + `€`
+document.querySelector('.count-order').textContent = nbProducts 
 }
 }
 
