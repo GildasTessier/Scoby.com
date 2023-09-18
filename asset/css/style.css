@@ -8,11 +8,11 @@
 
 @font-face {
     font-family: 'comfortaa-sb'; 
-    src: url(/Asset/font/Comfortaa-SemiBold.ttf);
+    src: url(../font/Comfortaa-SemiBold.ttf);
 }
 @font-face {
     font-family: 'comfortaa-light'; 
-    src: url(/Asset/font/Comfortaa-Light.ttf);
+    src: url(../font/Comfortaa-Light.ttf);
 }
 body {
     max-width: 1600px;
