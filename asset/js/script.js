@@ -9,7 +9,7 @@ document.querySelector("#picto-panier").addEventListener("click", () => {
 
 async function waiting () {
     try {
-        const response = await fetch("/datas/products.json");
+        const response = await fetch("./datas/products.json");
         return await response.json();
     }
     catch (e) {
