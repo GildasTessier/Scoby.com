@@ -47,6 +47,9 @@ body {
 .text-black {
     color: var(--black)
 }
+.font-bold {
+    font-family: 'comfortaa-sb';
+}
 h1 {
     text-align: center;
     font-size: min(8vw, 40px);
@@ -83,19 +86,23 @@ h1 {
 }
 /****** tab Order ********/
 .tab-order {
-    background-color: var(--green-dark);
+    /* background-color: var(--green-dark); */
     width: 320px;
     position: absolute;
     top: 80px; right: 0px;
     
 }
-.line-product-order, .title-order-customer, .line-total-price {
+.line-product-order, .title-order-customer, .line-total-price, .btn-order {
     display: flex;
     flex-direction: row;
     margin: 10px 5px;
     padding: 10px 5px ;
     font-size: 15px;
     border-radius: 5px;
+}
+.btn-order {
+   justify-content: center;
+   border: var(--gray) solid 1px;
 }
 
 
