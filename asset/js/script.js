@@ -159,7 +159,7 @@ function getIncreaseDecreaseOrder (object) {
             document.querySelector('.tx-order-empty').classList.toggle('hidden')
             document.querySelector('.order-in-page-order').classList.add('hidden')
             setTimeout (()=> {
-                window.location.href = "../boutique.html"
+                window.location.href = "./../boutique.html"
             }, 4000)
         }
     }) 
