@@ -3,7 +3,7 @@
     --green-light : #A4AD9C;
     --gray : #D8D8D8;
     --black : #0E0E0E;
-
+    
 }
 
 @font-face {
@@ -17,6 +17,9 @@
 body {
     max-width: 1600px;
     margin: auto;
+    display: grid; 
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
 }
 /*********** Background **********/
 body {
@@ -71,6 +74,7 @@ h1 {
     padding: 0px 10px;
     align-items: center;
     position: relative;
+    
     
 }
 .logo {
@@ -191,6 +195,7 @@ footer {
     justify-content: space-around;
     padding: 0px 10px;
     align-items: center;
+
     
 }
 .links-footer {
@@ -369,6 +374,24 @@ footer {
     align-items: center;
     border-radius: 5px;
     width: 120px;
+}
+.line-product-order {
+    justify-content: space-between;
+}
+.tx-order-empty {
+    text-align: center;
+    vertical-align: center;
+    font-size: xx-large;
+}
+.order-in-page-order {
+    max-width: 700px;
+    margin: auto;
+
+}
+.btn-valid-order {
+    width: 50%;
+    min-width: 180px;
+    margin: 50px auto;
 }
 
 /****************** Responsive ******************/

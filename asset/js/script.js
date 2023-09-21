@@ -3,6 +3,7 @@ document.querySelector("#button-menu-burger").addEventListener("click", () => {
     document.querySelector("#menu-mobile").classList.toggle("hidden");
 });
 document.querySelector("#picto-panier").addEventListener("click", () => {
+    if(document.querySelector('.count-order').innerText === '0') return
     document.querySelector("#tab-order").classList.toggle("hidden");  
 });
 
@@ -71,6 +72,7 @@ function DisplayPriceByOptionSize () {
                 this.querySelector('.article-price-opt2').classList.add('hidden')
                 this.querySelector('.article-price-opt1').classList.remove('hidden')
             }
+            console.log(this.querySelector('.article-price-opt1'));
         })
     })}
 
@@ -134,12 +136,37 @@ function getIncreaseDecreaseOrder (object) {
         this.querySelector('.js-nb-products-order').innerText = count;
         let tabOrderCustomer = JSON.parse(window.sessionStorage.getItem("tabOrderCustomer"))
         tabOrderCustomer[event.target.closest('.line-product-order').querySelector('.name-product').innerText].qty = count;
-        if (count < 1) delete tabOrderCustomer[event.target.closest('.line-product-order').querySelector('.name-product').innerText];
-        window.sessionStorage.setItem("tabOrderCustomer", JSON.stringify(tabOrderCustomer));
+        tabOrderCustomer[event.target.closest('.line-product-order').querySelector('.name-product').innerText].totalPrice = (count * parseInt(tabOrderCustomer[event.target.closest('.line-product-order').querySelector('.name-product').innerText].priceProduct)) + '€';
+        event.target.closest('.line-product-order').querySelector('.total-price-product').innerText = tabOrderCustomer[event.target.closest('.line-product-order').querySelector('.name-product').innerText].totalPrice
+
+        if (count < 1) {
+            delete tabOrderCustomer[event.target.closest('.line-product-order').querySelector('.name-product').innerText];
+            this.remove()
+        }
         
+        
+        window.sessionStorage.setItem("tabOrderCustomer", JSON.stringify(tabOrderCustomer));
+        let totalPrice = 0
+        let nbProducts = 0
+        for (let i in tabOrderCustomer) {
+            totalPrice += parseInt(tabOrderCustomer[i].totalPrice)
+            nbProducts += parseInt(tabOrderCustomer[i].qty)
+        }
+        document.querySelector('.total-price').textContent = totalPrice + `€`
+        document.querySelector('.count-order').textContent = nbProducts
+        
+        if (document.querySelector('.count-order').textContent === '0'){
+            document.querySelector('.tx-order-empty').classList.toggle('hidden')
+            document.querySelector('.order-in-page-order').classList.add('hidden')
+            setTimeout (()=> {
+                window.location.href = "../boutique.html"
+            }, 4000)
+        }
     }) 
 }
 document.querySelectorAll('.line-product-order').forEach(ligne => {
     getIncreaseDecreaseOrder(ligne)
 })
+
+
 
