@@ -95,6 +95,7 @@ h1 {
 .line-product-order, .title-order-customer, .line-total-price, .btn-order {
     display: flex;
     flex-direction: row;
+    align-items: center;
     margin: 10px 5px;
     padding: 10px 5px ;
     font-size: 15px;
@@ -359,6 +360,15 @@ footer {
 .article-add-article:active{
     background-color: var(--green-light);
     color: var(--green-dark);
+}
+
+/****************** order page ******************/
+.increase-decrease {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 5px;
+    width: 120px;
 }
 
 /****************** Responsive ******************/

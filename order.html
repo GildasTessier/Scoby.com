@@ -56,6 +56,24 @@
 
       <h1 class="text-green-dark">Mon pannier</h1>
 
+      <section>
+        <ul id="tab-order" class=" bg-green-light">
+            <li class="title-order-customer">
+              <p class="title-name text-green-dark font-bold">Article</p>
+              <p class="title-qty text-green-dark font-bold">Nb</p>
+              <p class="title-total text-green-dark font-bold">Total</p>
+            </li>
+            <div class="tab-order-for-template"> 
+            </div>
+            
+            <li class="line-total-price">
+              <p class="title-total-prise text-green-dark font-bold">Prix total :</p>
+              <p class="total-price text-green-dark font-bold">0,00€</p>
+            </li>
+        </ul>
+        <div class=""><a class="btn-order bg-green-dark text-green-light font-bold" href="./order.html">Valider la commande</a></div>
+      </section>
+
     </main>
     <footer class="bg-green-dark">
       <h1 class="logo text-green-light">Scoby.com</h1>
@@ -75,10 +93,18 @@
       </div>
     </footer>
     <template id="product-order-template" class="product-order-template">
-      <div class="line-product-order bg-green-light">
-        <p class="name-product text-green-dark">name</p>
-        <p class="nb-product text-green-dark">0</p>
-        <p class="total-price-product text-green-dark">0,00€</p>
+      <div class="line-product-order bg-green-dark">
+          
+        <p class="name-product text-green-light">name</p>
+
+        <div class="increase-decrease bg-green-light">
+            <button class="decrease-botton"> - </button>
+            <p class="nb-product nb-increase bg-green-light js-nb-products-order">0</p>
+            <button class="increase-botton js-increase"> + </button>
+        </div>
+
+        <p class="total-price-product text-green-light">0,00€</p>
+
       </div>
     </template>     
     <script src="./asset/js/script.js"></script>  

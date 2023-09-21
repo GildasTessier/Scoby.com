@@ -75,10 +75,11 @@ function DisplayPriceByOptionSize () {
     })}
 
 // For create table to order
-function addProductInOrder () {
+function addProductInOrder (products) {
     let tabOrderCustomer = window.sessionStorage.getItem("tabOrderCustomer") ? JSON.parse(window.sessionStorage.getItem("tabOrderCustomer")) : {};
     document.querySelectorAll('.article').forEach(btn => {
         btn.addEventListener('click', function (event)  {
+            console.log(products);
              if (!event.target.classList.contains('article-add-article')) return;
 
              if (!tabOrderCustomer[this.querySelector('.article-name').innerText +' '+ this.querySelector('.article-choice-content').options[this.querySelector('.article-choice-content').selectedIndex].innerText]){
@@ -91,12 +92,12 @@ function addProductInOrder () {
 
             if (this.querySelector('.article-choice-content').options[this.querySelector('.article-choice-content').selectedIndex].value === '1') {
                nameProduct.priceProduct = this.querySelector('.article-price-opt1').innerText
+
             }
             else {
                nameProduct.priceProduct = this.querySelector('.article-price-opt2').innerText
             }
            nameProduct.totalPrice = nameProduct.qty * parseInt(nameProduct.priceProduct) + '€'
-            console.table(tabOrderCustomer);
 
             window.sessionStorage.setItem("tabOrderCustomer", JSON.stringify(tabOrderCustomer));
 
@@ -105,15 +106,7 @@ function addProductInOrder () {
         })
     })
 }
-//For display order list in menu order
-// function displayOrderCustomer () {
-//     let tab = JSON.parse(window.sessionStorage.getItem("tabOrderCustomer"))
-//     let values = ''
-//     for (let i in tab) {
-//         values += `<div class"text-green-dark"> ${i} x ${tab[i].qty} = ${tab[i].totalPrice}</div>`
-//     }
-//     document.querySelector('#tab-order').innerHTML = values
-// }
+
 function displayOrderCustomer () {
     document.querySelector('.tab-order-for-template').innerHTML = ''
     let tab = JSON.parse(window.sessionStorage.getItem("tabOrderCustomer"))
@@ -131,4 +124,22 @@ document.querySelector('.total-price').textContent = totalPrice + `€`
 document.querySelector('.count-order').textContent = nbProducts
 }
 }
+
+// For Increase/Decrease nb products in order page
+function getIncreaseDecreaseOrder (object) {
+    object.addEventListener('click', function(event) {
+        let count =  parseInt(event.target.closest('.line-product-order').querySelector('.js-nb-products-order').innerText)
+        event.target.classList.contains('js-increase') ? count += 1 : count -= 1;
+        if (count < 0 ) count = 0;
+        this.querySelector('.js-nb-products-order').innerText = count;
+        let tabOrderCustomer = JSON.parse(window.sessionStorage.getItem("tabOrderCustomer"))
+        tabOrderCustomer[event.target.closest('.line-product-order').querySelector('.name-product').innerText].qty = count;
+        if (count < 1) delete tabOrderCustomer[event.target.closest('.line-product-order').querySelector('.name-product').innerText];
+        window.sessionStorage.setItem("tabOrderCustomer", JSON.stringify(tabOrderCustomer));
+        
+    }) 
+}
+document.querySelectorAll('.line-product-order').forEach(ligne => {
+    getIncreaseDecreaseOrder(ligne)
+})
 
