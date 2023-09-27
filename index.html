@@ -11,79 +11,64 @@
   <header>
 
     <nav class="nav-bar bg-green-dark">
-      <div class="top-navbar">
-        <div class="button-menu-burger bg-green-dark" id="button-menu-burger">
-          <span class="line-menu-burger ligne-top bg-green-light"></span>
-          <span class="line-menu-burger ligne-middle bg-green-light"></span>
-          <span class="line-menu-burger ligne-botom bg-green-light"></span>
-        </div>
+        <img id="icon-menu-mobile" class="icon-menu-mobile" src="./asset/img/Icons/menu.png">
         <div class="logo text-green-light">Scoby.com</div>
-        <ul class=" menu-desktop hidden text-green-light">
-          <li class="nav-item nav-item-desktop"><a class="nav-link nav-link-desktop active" href="./index.html">Accueil</a></li>
-          <li class="nav-item nav-item-desktop"><a class="nav-link nav-link-desktop"
-              href="./boutique.html">Boutique</a></li>
-          <li class="nav-item nav-item-desktop"><a class="nav-link nav-link-desktop"
-              href="./Fabrication.html">Fabrication</a></li>
-          <li class="nav-item nav-item-desktop"><a class="nav-link nav-link-desktop" href="./a-propos.html">A popos /
-              Nous contacter</a></li>
-          <li class="nav-item nav-item-desktop"><a class="nav-link nav-link-desktop" href="./mon-compte.html">Mon
-              compte</a></li>
+
+        <ul class="menu-desktop" id="menu-desktop">
+          <li class="btn-menu-desktop"><a class="link-menu text-green-light active-link-menu" href="./index.html">Accueil</a></li>
+          <li class="btn-menu-desktop"><a class="link-menu text-green-light" href="./boutique.html">Boutique</a></li>
+          <li class="btn-menu-desktop"><a class="link-menu text-green-light"href="./Fabrication.html">Fabrication</a></li>
+          <li class="btn-menu-desktop"><a class="link-menu text-green-light" href="./a-propos.html">A popos /Nous contacter</a></li>
+          <li class="btn-menu-desktop"><a class="link-menu text-green-light" href="./mon-compte.html">Mon compte</a></li>
         </ul>
-        <div>
-          <!-- <a class="hidden" href="#"><img class="icon-navbar" src="asset/img/Icons/referer (1).png" alt="picto to connect"></a> -->
-          <a id="picto-panier" class="navbar-icon" href="#"><img class="icon-navbar" src="./asset/img/Icons/boissons (1).png"
-            alt="picto pannier"></a>
+        <div class="icons-nav-bar">
+          <a class="icon-disconnect" href="#"><img class="img-icon-disconnect" src="asset/img/Icons/referer (1).png" alt="picto to connect"></a>
+          <div class="icon-order" id="icon-order">
+            <img class="img-icon-order" src="./asset/img/Icons/boissons (1).png"alt="pictogramme pannier">
             <p class="count-order bg-green-light text-green-dark ">0</p>
           </div>
-          <ul id="tab-order" class="tab-order bg-green-light hidden">
-            <li class="title-order-customer">
-              <p class="title-name text-green-dark font-bold">Article</p>
-              <p class="title-qty text-green-dark font-bold">Nb</p>
-              <p class="title-total text-green-dark font-bold">Total</p>
+        </div>
+          <ul class="menu-order bg-green-light hidden" id="menu-order">
+            <li class="title-order">
+              <p class="title-order-name text-green-dark font-bold">Article</p>
+              <p class="title-order-qty text-green-dark font-bold">Nb</p>
+              <p class="title-order-total text-green-dark font-bold">Total</p>
             </li>
-            <div class="tab-order-for-template"> 
+            <div class="contained-order"> 
             </div>
             
-            <li class="line-total-price">
-              <p class="title-total-prise text-green-dark font-bold">Prix total :</p>
-              <p class="total-price text-green-dark font-bold">0,00€</p>
+            <li class="total-order">
+              <p class="total-order-tx-total text-green-dark font-bold">Prix total :</p>
+              <p class="total-order-price text-green-dark font-bold">0,00€</p>
             </li>
-            <li class=""><a class="btn-order bg-green-dark text-green-light font-bold" href="./order.html">Commander / Modifier</a></li>
+            <a class="btn-order bg-green-dark text-green-light font-bold" href="./order.html">Commander / Modifier</a>
           </ul>
-        </div>
-      <ul class="hidden menu-mobile text-green-light" id="menu-mobile">
-        <li class="nav-item nav-item-mobile"><a class="nav-link nav-link-mobile active" href="./index.html">Accueil</a></li>
-        <li class="nav-item nav-item-mobile"><a class="nav-link nav-link-mobile"
-            href="./boutique.html">Boutique</a></li>
-        <li class="nav-item nav-item-mobile"><a class="nav-link nav-link-mobile"
-            href="./Fabrication.html">Fabrication</a></li>
-        <li class="nav-item nav-item-mobile"><a class="nav-link nav-link-mobile" href="./a-propos.html">A popos / Nous
-            contacter</a></li>
-        <li class="nav-item nav-item-mobile"><a class="nav-link nav-link-mobile" href="./mon-compte.html">Mon compte</a>
-        </li>
-        <li class="nav-item nav-item-mobile"><a class="nav-link nav-link-mobile" href="#">Déconnexion</a></li>
-      </ul>
-    </nav>
+        
+          <ul class="menu-mobile bg-green-dark hidden" id="menu-mobile">
+            <li class="btn-menu-mobile active-link-menu"><a class="link-menu text-green-light active-link-menu" href="./index.html">Accueil</a></li>
+            <li class="btn-menu-mobile"><a class="link-menu text-green-light" href="./boutique.html">Boutique</a></li>
+            <li class="btn-menu-mobile"><a class="link-menu text-green-light" href="./Fabrication.html">Fabrication</a></li>
+            <li class="btn-menu-mobile"><a class="link-menu text-green-light" href="./a-propos.html">A popos / Nous contacter</a></li>
+            <li class="btn-menu-mobile"><a class="link-menu text-green-light" href="./mon-compte.html">Mon compte</a></li>
+            <li class="btn-menu-mobile"><a class="link-menu text-green-light" href="#">Déconnexion</a></li>
+          </ul>
+        </nav>
   </header>
     <main>
 
       <h1 class="text-green-dark">Bienvenue</h1>
-      <section class="section-home-page">
-        <div class="bloc-home-page bloc-2">
-          <img class="img-bloc-home-page img-mobile" src="./asset/img/img-mobile/img-Touslesgouts.jpeg">
+      <section class="article-home-page">
+        
           <img class="img-bloc-home-page img-tablet" src="./asset/img/img-tablet/img-Touslesgouts.jpeg">
-          <img class="img-bloc-home-page img-desktop" src="./asset/img/img-desktop/img-Touslesgouts.jpeg">
           <div class="goup-text-home-page bg-green-dark text-green-light">
             <h2 class="text-gray">Du kombucha pour tous les goûts</h2>
             <p class="text-for-desktop">Venez découvrir nos différentes saveurs, inspirées par les richesses de notre belle Normandie, des notes délicates de pomme cueillie à maturité aux arômes subtils de fruits </p>
             <a class="text-gray cta" href="#">Venez decouvrir notre gamme</a>
-          </div>
-        </div>
-        <div class="bloc-home-page bloc-2">
-          <img class="img-bloc-home-page img-mobile" src="./asset/img/img-mobile/img-Touslesgouts.jpeg">
-          <img class="img-bloc-home-page img-tablet" src="./asset/img/img-tablet/img-Touslesgouts.jpeg">
-          <img class="img-bloc-home-page img-desktop" src="./asset/img/img-desktop/img-Touslesgouts.jpeg">
-          <div class="goup-text-home-page bg-green-dark text-green-light">
+          
+          </section>
+        <div class="bloc-home-page">
+          <div class="img-bloc-home-page-1"></div>
+          <div class="text-bloc-home-page bg-green-dark text-green-light">
             <h2 class="text-gray">En ce moment</h2>
             <p class="text-for-desktop">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, expedita! Commodi odit dolor maxime nam. Autem illo vero molestiae dicta est totam. Voluptatibus explicabo architecto non totam mollitia corrupti in? </p>
             <a class="text-gray cta" href="#">En savoir plus</a>
@@ -136,6 +121,6 @@
           <p class="total-price-product text-green-light">0,00€</p>
         </div>
       </template>
-      <script src="./asset/js/script.js"></script>       
+      <script src="./asset/js/general.js"></script>       
     </body>
     </html>
