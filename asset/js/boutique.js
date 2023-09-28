@@ -9,7 +9,11 @@ async function callDataProducts () {
     }
 }
 callDataProducts()
-    .then(displayProductsByClass)
+.then(displayProductsByClass)
+callDataProducts()
+.then(addProductInOrder)
+
+
 // for insert all products in page
 function displayProductsByClass(products) {
     let productByClass = products.filter((product => product.class.includes('new')))
@@ -38,5 +42,23 @@ function createProduct(product) {
     blocProduct.querySelector('.js-price-product-2').textContent = getNumInEuros(product.prices[1]);
 
     return blocProduct;
-    
+}
+
+// For create table to order in session storage
+function addProductInOrder (products) {
+    let tabOrderCustomer = window.sessionStorage.getItem("tabOrderCustomer") ? JSON.parse(window.sessionStorage.getItem("tabOrderCustomer")) : {};
+    document.querySelectorAll('.js-product-card').forEach(card => {
+        
+        card.addEventListener('click', function (event)  {
+            if (!event.target.classList.contains('js-add-product')) return;
+
+            let dataProduct = products.filter(product => product.name === this.querySelector('.js-name-product').innerText)[0]
+            
+            if (!tabOrderCustomer[dataProduct.name +' '+ this.querySelector('.size-product.active').innerText]){
+                 price = this.querySelector('.size-product.active').innerText === '33 cl' ? dataProduct.prices[0] : dataProduct.prices[1];
+                 tabOrderCustomer[dataProduct.name +' '+ this.querySelector('.size-product.active').innerText] = {"qty": 1, "priceProduct": price, "totalPrice": price};
+                } 
+            window.sessionStorage.setItem("tabOrderCustomer", JSON.stringify(tabOrderCustomer));
+        })
+    })
 }

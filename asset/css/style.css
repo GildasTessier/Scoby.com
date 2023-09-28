@@ -153,6 +153,7 @@ color: var(--green-dark);
         font-size: 1.8em;
     }
     .menu-mobile {
+        z-index: 10;
         width: 300px;
         top: 43px;
     }
@@ -420,9 +421,15 @@ color: var(--green-dark);
     display: flex;
     justify-content: space-between;
 }
+@media (min-width:500px){ 
+    .btns-product {
+        padding: 0 10px;
+    }
+}
 .opt-product {
-    opacity: 40%;
-    background-color: #BEC8B6;
+    
+    background-color: #AEB8A6;
+    color: #63685D;
     border: none;
     border-radius: 5px;
     height: 46px;
