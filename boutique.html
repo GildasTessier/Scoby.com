@@ -27,10 +27,11 @@
         <a class="icon-disconnect" href="#"><img class="img-icon-disconnect" src="asset/img/Icons/referer (1).png" alt="picto to connect"></a>
         <div class="icon-order" id="icon-order">
           <img class="img-icon-order" src="./asset/img/Icons/boissons (1).png"alt="pictogramme pannier">
-          <p class="count-order bg-green-light text-green-dark ">0</p>
+          <p class="count-order js-count-order bg-green-light text-green-dark ">0</p>
         </div>
       </div>
         <ul class="menu-order bg-green-light hidden" id="menu-order">
+          <img id="close-order" class="img-close-order" src="./asset/img/Icons/close-page.png" alt="close">
           <li class="title-order">
             <p class="title-order-name text-green-dark font-bold">Article</p>
             <p class="title-order-qty text-green-dark font-bold">Nb</p>
@@ -41,9 +42,9 @@
           
           <li class="total-order">
             <p class="total-order-tx-total text-green-dark font-bold">Prix total :</p>
-            <p class="total-order-price text-green-dark font-bold">0,00€</p>
+            <p class="total-order-price js-total-order-price text-green-dark font-bold">0,00€</p>
           </li>
-          <a class="btn-order bg-green-dark text-green-light font-bold" href="./order.html">Commander / Modifier</a>
+          <a class="btn-order bg-green-dark text-green-light font-bold" href="./order.html">Commander</a>
         </ul>
       
         <ul class="menu-mobile bg-green-dark hidden" id="menu-mobile">
@@ -120,13 +121,13 @@
       <p class="descrip-product js-descrip-product text-withe">Le classique mais incontournable Kombucha Nature à base de Thé Noir, de Thé Vert et de Cassonade </p>
       <div class="btns-product">
         <div class="btns-opt-product">
-          <button class="opt-product js-opt-product-1 active">
-            <p class="size-product js-size-product-1 active"></p>
-            <p class="price-product js-price-product-1 active"></p>
+          <button class="opt-product js-opt-product-1 js-opt-product active">
+            <p class="size-product js-size-product-1 js-opt-product active"></p>
+            <p class="price-product js-price-product-1 js-opt-product active"></p>
           </button>
-          <button class="opt-product js-opt-product-2  js-add-product">
-            <p class="size-product js-size-product-2 "></p>
-            <p class="price-product js-price-product-2 "></p>
+          <button class="opt-product js-opt-product-2 js-opt-product ">
+            <p class="size-product js-size-product-2 js-opt-product "></p>
+            <p class="price-product js-price-product-2 js-opt-product "></p>
           </div>
         </button>
         <button class="add-product bg-green-dark text-withe"><img class="img-btn-add js-add-product" src="./asset/img/Icons/plus.png"></button>
@@ -137,9 +138,11 @@
 
   <template id="product-order-template" class="product-order-template">
     <div class="line-product-order bg-green-dark">
-      <p class="name-product text-green-light">name</p>
-      <p class="nb-product text-green-light">0</p>
-      <p class="total-price-product text-green-light">0,00€</p>
+      <p class="name-product-order js-name-product-order text-green-light">name</p>
+      <button class="btn-qty btn-decrease js-btn-decrease">-</button>
+      <p class="nb-product js-nb-product-order text-green-light">0</p>
+      <button class="btn-qty btn-increase js-btn-increase">+</button>
+      <p class="total-price-product js-total-price-product-order text-green-light">0,00€</p>
     </div>
   </template>
 

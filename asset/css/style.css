@@ -126,18 +126,13 @@ color: var(--green-dark);
     position: absolute;
     top: 78px;
     width: 100%;
+    border-bottom: var(--withe) 1px solid;
     
     margin-left: -2%;
     margin-right: -30px;
     text-align: center;
     padding: 20px 0;
     
-}
-.title-order, .total-order  {
-    font-size: 1.5em;
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 40px;
 }
 .btn-order {
     font-size: 1.6em;
@@ -169,7 +164,8 @@ color: var(--green-dark);
         font-size: 1em;
         width: 300px;
         right: 30px;
-        top: 48px
+        top: 48px;
+        border-left: var(--withe) 1px solid;
     }
     .title-order, .total-order  {
         font-size: 0.8em;
@@ -226,6 +222,64 @@ color: var(--green-dark);
         margin: 0 10px;
     }
 }
+/********** tab Order ************/
+.tab-order {
+    /* background-color: var(--green-dark); */
+    width: 320px;
+    position: absolute;
+    top: 80px; right: 0px;  
+}
+.img-close-order {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 8px;
+    top : 8px
+}
+.line-product-order, .title-order, .total-order, .btn-order {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px 5px;
+    padding: 10px 5px ;
+    font-size: 15px;
+    border-radius: 5px;
+}
+.title-order, .total-order  {
+    font-size: 1em;
+    display: flex;
+    justify-content: space-around;
+  
+}
+.btn-order {
+   justify-content: center;
+   border: var(--gray) solid 1px;
+}
+
+
+.name-product-order, .title-order-name {
+    width: 50%;
+    text-align: start;
+}
+.nb-product, .title-order-qty {
+    width: 25%;
+    text-align: center;
+}
+.total-price-product, .title-order-total {
+    width: 25%;
+    text-align: end;
+}
+.total-order-tx-total {
+    width: 75%;
+    text-align: end;
+}
+.total-order-price {
+    width: 25%;
+    text-align: end;
+}
+
+
+
 /********************* footer ********************/
 .footer {
     padding: 10px;

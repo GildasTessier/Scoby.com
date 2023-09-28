@@ -53,12 +53,32 @@ function addProductInOrder (products) {
             if (!event.target.classList.contains('js-add-product')) return;
 
             let dataProduct = products.filter(product => product.name === this.querySelector('.js-name-product').innerText)[0]
-            
+
+            let price = this.querySelector('.size-product.active').innerText === '33 cl' ? dataProduct.prices[0] : dataProduct.prices[1];
             if (!tabOrderCustomer[dataProduct.name +' '+ this.querySelector('.size-product.active').innerText]){
-                 price = this.querySelector('.size-product.active').innerText === '33 cl' ? dataProduct.prices[0] : dataProduct.prices[1];
                  tabOrderCustomer[dataProduct.name +' '+ this.querySelector('.size-product.active').innerText] = {"qty": 1, "priceProduct": price, "totalPrice": price};
                 } 
+            else {
+               tabOrderCustomer[dataProduct.name +' '+ this.querySelector('.size-product.active').innerText].qty += 1;
+               tabOrderCustomer[dataProduct.name +' '+ this.querySelector('.size-product.active').innerText].totalPrice = tabOrderCustomer[dataProduct.name +' '+ this.querySelector('.size-product.active').innerText].qty * price;
+            }
             window.sessionStorage.setItem("tabOrderCustomer", JSON.stringify(tabOrderCustomer));
+            displayOrderCustomer()
         })
     })
 }
+
+//for change opt size select 
+    document.querySelector('.section-boutique').addEventListener('click', function (event) {
+        if (!event.target.classList.contains('js-opt-product')) return
+        if (event.target.classList.contains('active')) return;
+        
+        for (let element of event.target.closest('.btns-opt-product').children){
+            element.classList.toggle('active')
+            for (let child of element.children) {
+                child.classList.toggle('active')
+            }
+        }
+})
+
+
