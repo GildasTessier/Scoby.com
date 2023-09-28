@@ -65,59 +65,16 @@
 
       <h2 class="title-section-boutique text-green-light bg-green-dark">Nouveautés</h2>
       <div class="gp-products " id="gp-products-new">
-
-      <div class="card-product">
-        <div class="bloc-img-product bg-whithe">
-          <img class="img-product" src="./asset/img/NOVITA-15101-Kombucha-Nature-Bio-33cl.png">
-        </div>
-        <div class="info-product bg-green-light">
-          <h3 class="name-product text-black">Classique</h3>
-          <p class="descrip-product text-withe">Le classique mais incontournable Kombucha Nature à base de Thé Noir, de Thé Vert et de Cassonade </p>
-          <div class="btns-product">
-            <div class="btns-opt-product">
-              <button class="opt-product active bg-green-light">
-                <p class="size-product">25cl</p>
-                <p class="price-product">3,00€</p>
-              </button>
-              <button class="opt-product">
-                <p class="size-product">75cl</p>
-                <p class="price-product">6,00€</p>
-              </div>
-            </button>
-            <button class="add-product bg-green-dark text-withe"><img class="img-btn-add" src="./asset/img/Icons/plus.png"></button>
-          </div>
-        </div>
-      </div>
-      <div class="card-product">
-        <div class="bloc-img-product bg-whithe">
-          <img class="img-product" src="./asset/img/NOVITA-15101-Kombucha-Nature-Bio-33cl.png">
-        </div>
-        <div class="info-product bg-green-light">
-          <h3 class="name-product text-black">Classique</h3>
-          <p class="descrip-product text-withe">Le classique mais incontournable Kombucha Nature à base de Thé Noir, de Thé Vert et de Cassonade </p>
-          <div class="btns-product">
-            <div class="btns-opt-product">
-              <button class="opt-product active bg-green-light">
-                <p class="size-product">25cl</p>
-                <p class="price-product">3,00€</p>
-              </button>
-              <button class="opt-product">
-                <p class="size-product">75cl</p>
-                <p class="price-product">6,00€</p>
-              </div>
-            </button>
-            <button class="add-product bg-green-dark text-withe"><img class="img-btn-add" src="./asset/img/Icons/plus.png"></button>
-          </div>
-        </div>
       </div>
 
-      </div>
       <h2 class="title-section-boutique text-green-light bg-green-dark">Clasique</h2>
-      <div class="gp-products " id="gp-products-clasique">
+      <div class="gp-products " id="gp-products-classic">
       </div>
+
       <h2 class="title-section-boutique text-green-light bg-green-dark">Florales</h2>
       <div class="gp-products " id="gp-products-floral">
       </div>
+
       <h2 class="title-section-boutique text-green-light bg-green-dark">Fruités</h2>
       <div class="gp-products " id="gp-products-fruit">
       </div>
@@ -153,30 +110,30 @@
     </div>
   </footer>
 
-
-  <template id="productTemplate">
-    <li class="article">
-
-      <div class="acticle-name-comp">
-        <p class="article-name">Nom</p>
-        <p class="article-comp text-green-dark">composition boisson</p>
+<template id="productTemplate">
+  <div class="card-product">
+    <div class="bloc-img-product bg-whithe">
+      <img class="img-product js-img-product" src="./asset/img/img-classique.png" alt="image produit">
+    </div>
+    <div class="info-product bg-green-light">
+      <h3 class="name-product js-name-product text-black">Classique</h3>
+      <p class="descrip-product js-descrip-product text-withe">Le classique mais incontournable Kombucha Nature à base de Thé Noir, de Thé Vert et de Cassonade </p>
+      <div class="btns-product">
+        <div class="btns-opt-product">
+          <button class="opt-product js-opt-product-2 active bg-green-light">
+            <p class="size-product js-size-product-1"></p>
+            <p class="price-product js-price-product-1"></p>
+          </button>
+          <button class="opt-product js-opt-product-2">
+            <p class="size-product js-size-product-2"></p>
+            <p class="price-product js-price-product-2"></p>
+          </div>
+        </button>
+        <button class="add-product bg-green-dark text-withe"><img class="img-btn-add" src="./asset/img/Icons/plus.png"></button>
       </div>
-      <select class="bg-green-light article-choice-content">
-        <option class="js-opt-size opt-size-1" value="1">0 cl</option>
-        <option class="js-opt-size opt-size-2"" value="2">0 cl</option>
-
-      </select>
-      <p class="article-price-opt1">0,00€</p>
-      <p class="article-price-opt2 hidden">0,00€</p>
-
-      <div class="article-sizing-button bg-green-light js-btnMoreLessProtucts" id="btnMoreLessProtucts">
-        <button class="decrease-botton"> - </button>
-        <p class="nb-increase js-nb-products">1</p>
-        <button class="increase-botton js-increase"> + </button>
-      </div>
-      <button class="article-add-article bg-green-dark text-green-light">Ajouter<br>au panier</button>
-    </li>
-  </template>
+    </div>
+  </div>
+</template>
 
   <template id="product-order-template" class="product-order-template">
     <div class="line-product-order bg-green-dark">
@@ -190,6 +147,7 @@
 
 
   <script src="./asset/js/general.js"></script>  
+  <script src="./asset/js/boutique.js"></script>  
 </body>
 
 </html>

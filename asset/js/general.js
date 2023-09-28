@@ -10,6 +10,11 @@ document.getElementById('icon-menu-mobile').addEventListener('click', function (
     //For change icon menu mobile when is open
     event.target.getAttribute('src') === './asset/img/Icons/menu.png' ?  event.target.src = './asset/img/Icons/close.png' : event.target.src = './asset/img/Icons/menu.png'
 })
+//For display number in format 00,00€
+function getNumInEuros (number) {
+    return (new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(number))
+}
+
 
 
 

@@ -1,51 +1,57 @@
 [
     {
         "id": 1,
-        "name": "Classic",
-        "class": "Classic",
-        "composition": "Thé Noir - Thé Vert - Cassonade",
+        "name": "Nature",
+        "class": ["classic"],
+        "composition": "Le classique mais incontournable Kombucha Nature à base de Thé Noir, de Thé Vert et de Cassonade",
         "sizes": ["33", "75"],
-        "prices": [3.00, 6.00]
+        "prices": [3.00, 6.00],
+        "img": "./asset/img/img-classique.png"
     },
     {
         "id": 2,
         "name": "Hibiscus",
-        "class": "Les Florales",
-        "composition": "Thé Noir - Thé Vert - Cassonade - Hibiscus",
+        "class": ["floral", "new"],
+        "composition": "Un Kombucha au bon gout d’Hibiscus à base de Thé Noir, de Thé Vert et de Cassonade et bien sûre d’hibiscus",
         "sizes": ["33", "75"],
-        "prices": [4, 8]
+        "prices": [4, 8],
+        "img": "./asset/img/img-hibiscus.png"
     },
     {
         "id": 3,
         "name": "Menthe",
-        "class": "Les Florales",
-        "composition": "Thé Noir - Thé Vert - Cassonade - Menthe verte",
+        "class": ["floral"],
+        "composition": "Un Kombucha au bon gout de menthe à base de Thé Noir, de Thé Vert et de Cassonade et bien sûre de menthe",
         "sizes": ["33", "75"],
-        "prices": [4, 8]
+        "prices": [4, 8],
+        "img": "./asset/img/img-menthe.png"
     },
     {
         "id": 4,
         "name": "Violette",
-        "class": "Les Florales",
-        "composition": "Thé Noir - Thé Vert - Cassonade - Violette",
+        "class": ["floral"],
+        "composition": "Un Kombucha au bon gout de violettes à base de Thé Noir, de Thé Vert et de Cassonade et bien sûre de violettes",
         "sizes": ["33", "75"],
-        "prices": [4, 8]
+        "prices": [4, 8],
+        "img": "./asset/img/img-classique.png"
     },
     {
         "id": 5,
         "name": "Pomme",
-        "class": "Les Fruités",
-        "composition": "Thé Noir - Thé Vert - Cassonade - Pommes",
+        "class": ["fruit", "new"],
+        "composition": "Un Kombucha au bon gout de Pomme à base de Thé Noir, de Thé Vert et de Cassonade et bien sûre de pommes",
         "sizes": ["33", "75"],
-        "prices": [3, 6]
+        "prices": [3, 6],
+        "img": "./asset/img/img-classique.png"
     },
     {
         "id": 6,
         "name": "Fraise",
-        "class": "Les Fruités",
-        "composition": "Thé Noir - Thé Vert - Cassonade - Fraises",
+        "class": ["fruit"],
+        "composition": "Un Kombucha au bon gout de Fraise à base de Thé Noir, de Thé Vert et de Cassonade et bien sûre de Fraises",
         "sizes": ["33", "75"],
-        "prices": [3, 6]
+        "prices": [3, 6],
+        "img": "./asset/img/img-classique.png"
     }
 ]
   

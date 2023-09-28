@@ -361,14 +361,15 @@ color: var(--green-dark);
     text-align: center;
     font-size: 1.5em;
     padding: 8px 0;
-  
 }
-
-
+.gp-products {
+    margin-bottom: 40px;
+}
 @media (min-width:720px){ 
     .gp-products {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        margin: 10px 10px 40px 10px;
     }
     }
     @media (min-width:1200px){ 
