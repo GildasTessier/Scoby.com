@@ -357,7 +357,26 @@ color: var(--green-dark);
     }
 }
 /********************* boutique page ********************/
+.title-section-boutique {
+    text-align: center;
+    font-size: 1.5em;
+    padding: 8px 0;
+  
+}
 
+
+@media (min-width:720px){ 
+    .gp-products {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    }
+    @media (min-width:1200px){ 
+        .gp-products {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        }
 /*** card product ***/
 .card-product {
     width: 95%;
