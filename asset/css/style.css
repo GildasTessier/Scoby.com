@@ -143,7 +143,7 @@ color: var(--green-dark);
         font-size: 1.8em;
     }
     .menu-mobile {
-        width: 50%;
+        width: 300px;
         top: 43px;
     }
     .btn-menu-mobile {
@@ -215,6 +215,48 @@ color: var(--green-dark);
         margin: 0 10px;
     }
 }
+/********************* footer ********************/
+.footer {
+    padding: 10px;
+}
+.links-pages-footer {
+    font-size: 1em;
+    padding-top: 10px;
+}
+.links-legales-footer {
+    font-size: 0.6em;
+    padding-top: 10px;
+}
+.logo-footer, .links-pages-footer, .links-legales-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.link-footer {
+    margin: 10px 20px;
+    text-decoration: underline;
+    text-decoration: underline;
+}
+@media (min-width:800px){
+    .footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .links-legales-footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+@media (min-width:1000px){
+    .links-pages-footer {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
 
 /********************* home Page ********************/
 
@@ -240,7 +282,7 @@ color: var(--green-dark);
 .goup-text-home-page {
     top: 250px; 
     text-align: center;
-    font-size: min(3vw, 20px);;
+    font-size: min(3.5vw, 20px);;
     width: min(625px, 70%) ;
     height: min(40px);
     border-radius: 12px;
@@ -254,6 +296,7 @@ color: var(--green-dark);
     font-size: min(2.5vw, 15px);
     text-decoration: underline;
     text-underline-position: under;
+    margin-top: 5px;
 }
 .text-for-desktop {
     display: none;
