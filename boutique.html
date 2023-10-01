@@ -30,7 +30,7 @@
           <p class="count-order js-count-order bg-green-light text-green-dark ">0</p>
         </div>
       </div>
-        <ul class="menu-order bg-green-light hidden" id="menu-order">
+        <ul class="menu-order bg-green-light bx-shadow hidden" id="menu-order">
           <img id="close-order" class="img-close-order" src="./asset/img/Icons/close-page.png" alt="close">
           <li class="title-order">
             <p class="title-order-name text-green-dark font-bold">Article</p>
@@ -44,10 +44,10 @@
             <p class="total-order-tx-total text-green-dark font-bold">Prix total :</p>
             <p class="total-order-price js-total-order-price text-green-dark font-bold">0,00€</p>
           </li>
-          <a class="btn-order bg-green-dark text-green-light font-bold" href="./order.html">Commander</a>
+          <a class="btn-order bg-green-dark text-green-light font-bold bx-shadow" href="./order.html">Commander</a>
         </ul>
       
-        <ul class="menu-mobile bg-green-dark hidden" id="menu-mobile">
+        <ul class="menu-mobile bg-green-dark  bx-shadow" id="menu-mobile">
           <li class="btn-menu-mobile"><a class="link-menu text-green-light" href="./index.html">Accueil</a></li>
           <li class="btn-menu-mobile active-link-menu"><a class="link-menu text-green-light active-link-menu" href="./boutique.html">Boutique</a></li>
           <li class="btn-menu-mobile"><a class="link-menu text-green-light" href="./Fabrication.html">Fabrication</a></li>
@@ -64,21 +64,21 @@
     <section class="section-boutique">
 
 
-      <h2 class="title-section-boutique text-green-light bg-green-dark">Nouveautés</h2>
-      <div class="gp-products " id="gp-products-new">
-      </div>
+      <h2 class="title-section-boutique text-green-light bg-green-dark bx-shadow">Nouveautés</h2>
+      <ul class="gp-products " id="gp-products-new">
+      </ul>
 
-      <h2 class="title-section-boutique text-green-light bg-green-dark">Clasique</h2>
-      <div class="gp-products " id="gp-products-classic">
-      </div>
+      <h2 class="title-section-boutique text-green-light bg-green-dark bx-shadow">Clasique</h2>
+      <ul class="gp-products " id="gp-products-classic">
+      </ul>
 
-      <h2 class="title-section-boutique text-green-light bg-green-dark">Florales</h2>
-      <div class="gp-products " id="gp-products-floral">
-      </div>
+      <h2 class="title-section-boutique text-green-light bg-green-dark bx-shadow">Florales</h2>
+      <ul class="gp-products " id="gp-products-floral">
+      </ul>
 
-      <h2 class="title-section-boutique text-green-light bg-green-dark">Fruités</h2>
-      <div class="gp-products " id="gp-products-fruit">
-      </div>
+      <h2 class="title-section-boutique text-green-light bg-green-dark bx-shadow">Fruités</h2>
+      <ul class="gp-products " id="gp-products-fruit">
+      </ul>
 
 
 
@@ -112,7 +112,7 @@
   </footer>
 
 <template id="productTemplate">
-  <div class="card-product js-product-card">
+  <li class="card-product js-product-card bx-shadow">
     <div class="bloc-img-product bg-whithe">
       <img class="img-product js-img-product" src="./asset/img/img-classique.png" alt="image produit">
     </div>
@@ -130,18 +130,18 @@
             <p class="price-product js-price-product-2 js-opt-product "></p>
           </div>
         </button>
-        <button class="add-product bg-green-dark text-withe"><img class="img-btn-add js-add-product" src="./asset/img/Icons/plus.png"></button>
+        <button class="add-product bg-green-dark text-withe bx-shadow"><img class="img-btn-add js-add-product" src="./asset/img/Icons/plus.png"></button>
       </div>
     </div>
-  </div>
+  </li>
 </template>
 
   <template id="product-order-template" class="product-order-template">
     <div class="line-product-order bg-green-dark">
       <p class="name-product-order js-name-product-order text-green-light">name</p>
-      <button class="btn-qty btn-decrease js-btn-decrease bg-green-light text-green-dark">-</button>
+      <button class="btn-qty btn-decrease js-btn-decrease bg-green-light text-green-dark bx-shadow">-</button>
       <p class="nb-product js-nb-product-order text-green-light">0</p>
-      <button class="btn-qty btn-increase js-btn-increase bg-green-light text-green-dark">+</button>
+      <button class="btn-qty btn-increase js-btn-increase bg-green-light text-green-dark bx-shadow">+</button>
       <p class="total-price-product js-total-price-product-order text-green-light">0,00€</p>
     </div>
   </template>

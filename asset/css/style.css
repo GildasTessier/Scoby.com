@@ -23,6 +23,9 @@ body {
 .hidden {
     display: none;
 }
+.bx-shadow {
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
 /*********** Background **********/
 body {
     background-color: var(--gray);
@@ -108,7 +111,7 @@ h1 {
     text-align: center;
     margin-right: -30px;
     overflow: hidden;
-    border-bottom: var(--gray) solid 1px;
+    
 }
 .btn-menu-mobile {
     font-size: 1.4em;
@@ -126,8 +129,6 @@ color: var(--green-dark);
     position: absolute;
     top: 78px;
     width: 100%;
-    border-bottom: var(--withe) 1px solid;
-    
     margin-left: -2%;
     margin-right: -30px;
     text-align: center;
@@ -165,7 +166,6 @@ color: var(--green-dark);
         width: 300px;
         right: 30px;
         top: 48px;
-        border-left: var(--withe) 1px solid;
     }
     .title-order, .total-order  {
         font-size: 0.8em;
@@ -254,13 +254,11 @@ color: var(--green-dark);
 .btn-order {
    justify-content: center;
    border: var(--gray) solid 1px;
-   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 .btn-qty {
     border-radius: 5px;
     width: 25px;
     height: 23px;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 
 }
 
@@ -449,7 +447,7 @@ color: var(--green-dark);
     display: flex;
     flex-direction: row;
     border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
 }
 .bloc-img-product {
     width: 40%;
@@ -479,6 +477,9 @@ color: var(--green-dark);
     font-size: 0.8em;
     line-height: 20px;
 }
+.btns-opt-product {
+    width: 115px;
+}
 .btns-product {
     display: flex;
     justify-content: space-between;
@@ -496,7 +497,7 @@ color: var(--green-dark);
     border-radius: 5px;
     height: 46px;
     padding: 0px 12px;
-    margin-bottom: 5px;
+
     font-family: 'comfortaa-light';
     font-size: 0.6em;
     
@@ -507,7 +508,6 @@ color: var(--green-dark);
     border: var(--withe) solid 1px;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     opacity: 100%;
-
 }
 .price-product {
     margin-top: 5px;
@@ -517,7 +517,6 @@ color: var(--green-dark);
     height: 47px;
     border: none;
     border-radius: 47px;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     vertical-align: middle;
 }
 .img-btn-add {
@@ -525,3 +524,4 @@ color: var(--green-dark);
     height: 25px;
     vertical-align: middle;
 }
+

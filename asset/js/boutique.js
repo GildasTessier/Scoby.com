@@ -46,7 +46,7 @@ function createProduct(product) {
 
 // For create table to order in session storage
 function addProductInOrder (products) {
-    let tabOrderCustomer = window.sessionStorage.getItem("tabOrderCustomer") ? JSON.parse(window.sessionStorage.getItem("tabOrderCustomer")) : {};
+    let tabOrderCustomer = window.localStorage.getItem("tabOrderCustomer") ? JSON.parse(window.localStorage.getItem("tabOrderCustomer")) : {};
     document.querySelectorAll('.js-product-card').forEach(card => {
         
         card.addEventListener('click', function (event)  {
@@ -62,7 +62,7 @@ function addProductInOrder (products) {
                tabOrderCustomer[dataProduct.name +' '+ this.querySelector('.size-product.active').innerText].qty += 1;
                tabOrderCustomer[dataProduct.name +' '+ this.querySelector('.size-product.active').innerText].totalPrice = tabOrderCustomer[dataProduct.name +' '+ this.querySelector('.size-product.active').innerText].qty * price;
             }
-            window.sessionStorage.setItem("tabOrderCustomer", JSON.stringify(tabOrderCustomer));
+            window.localStorage.setItem("tabOrderCustomer", JSON.stringify(tabOrderCustomer));
             displayOrderCustomer()
         })
     })
