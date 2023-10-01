@@ -9,49 +9,53 @@
 </head>
 <body>
     
-      <header>
+  <header>
 
-        <nav class="nav-bar bg-green-dark">
-          <div class="top-navbar">
-            <div class="button-menu-burger bg-green-dark" id="button-menu-burger">
-              <span class="line-menu-burger ligne-top bg-green-light"></span>
-              <span class="line-menu-burger ligne-middle bg-green-light"></span>
-              <span class="line-menu-burger ligne-botom bg-green-light"></span>
-            </div>
-            <div class="logo text-green-light">Scoby.com</div>
-            <ul class=" menu-desktop hidden text-green-light">
-              <li class="nav-item nav-item-desktop"><a class="nav-link nav-link-desktop" href="./index.html">Accueil</a></li>
-              <li class="nav-item nav-item-desktop"><a class="nav-link nav-link-desktop "
-                  href="./boutique.html">Boutique</a></li>
-              <li class="nav-item nav-item-desktop"><a class="nav-link nav-link-desktop"
-                  href="./Fabrication.html">Fabrication</a></li>
-              <li class="nav-item nav-item-desktop"><a class="nav-link nav-link-desktop" href="./a-propos.html">A popos /
-                  Nous contacter</a></li>
-              <li class="nav-item nav-item-desktop"><a class="nav-link nav-link-desktop" href="./mon-compte.html">Mon
-                  compte</a></li>
-            </ul>
-            <div>
-              <!-- <a class="hidden" href="#"><img class="icon-navbar" src="asset/img/Icons/referer (1).png" alt="picto to connect"></a> -->
-              <a id="picto-panier" class="navbar-icon" href="#"><img class="icon-navbar" src="./asset/img/Icons/boissons (1).png"
-                alt="picto pannier"></a>
-                <p class="count-order bg-green-light text-green-dark ">0</p>
-              </div>
-              </div>
-            </div>
-          <ul class="hidden menu-mobile text-green-light" id="menu-mobile">
-            <li class="nav-item nav-item-mobile"><a class="nav-link nav-link-mobile" href="./index.html">Accueil</a></li>
-            <li class="nav-item nav-item-mobile"><a class="nav-link nav-link-mobile"
-                href="./boutique.html">Boutique</a></li>
-            <li class="nav-item nav-item-mobile"><a class="nav-link nav-link-mobile"
-                href="./Fabrication.html">Fabrication</a></li>
-            <li class="nav-item nav-item-mobile"><a class="nav-link nav-link-mobile" href="./a-propos.html">A popos / Nous
-                contacter</a></li>
-            <li class="nav-item nav-item-mobile"><a class="nav-link nav-link-mobile" href="./mon-compte.html">Mon compte</a>
-            </li>
-            <li class="nav-item nav-item-mobile"><a class="nav-link nav-link-mobile" href="#">Déconnexion</a></li>
-          </ul>
-        </nav>
-      </header>
+    <nav class="nav-bar bg-green-dark">
+      <img id="icon-menu-mobile" class="icon-menu-mobile" src="./asset/img/Icons/menu.png">
+      <p class="logo text-green-light">Scoby.com</p>
+
+      <ul class="menu-desktop" id="menu-desktop">
+        <li class="btn-menu-desktop"><a class="link-menu text-green-light" href="./index.html">Accueil</a></li>
+        <li class="btn-menu-desktop"><a class="link-menu text-green-light " href="./boutique.html">Boutique</a></li>
+        <li class="btn-menu-desktop"><a class="link-menu text-green-light"href="./Fabrication.html">Fabrication</a></li>
+        <li class="btn-menu-desktop"><a class="link-menu text-green-light" href="./a-propos.html">A popos /Nous contacter</a></li>
+        <li class="btn-menu-desktop"><a class="link-menu text-green-light" href="./mon-compte.html">Mon compte</a></li>
+      </ul>
+      <div class="icons-nav-bar">
+        <a class="icon-disconnect" href="#"><img class="img-icon-disconnect" src="asset/img/Icons/referer (1).png" alt="picto to connect"></a>
+        <div class="icon-order hidden" id="icon-order">
+          <img class="img-icon-order" src="./asset/img/Icons/boissons (1).png"alt="pictogramme pannier">
+          <p class="count-order js-count-order bg-green-light text-green-dark ">0</p>
+        </div>
+      </div>
+        <ul class="menu-order bg-green-light bx-shadow hidden" id="menu-order">
+          <img id="close-order" class="img-close-order" src="./asset/img/Icons/close-page.png" alt="close">
+          <li class="title-order">
+            <p class="title-order-name text-green-dark font-bold">Article</p>
+            <p class="title-order-qty text-green-dark font-bold">Nb</p>
+            <p class="title-order-total text-green-dark font-bold">Total</p>
+          </li>
+          <div class="contained-order"> 
+          </div>
+          
+          <li class="total-order">
+            <p class="total-order-tx-total text-green-dark font-bold">Prix total :</p>
+            <p class="total-order-price js-total-order-price text-green-dark font-bold">0,00€</p>
+          </li>
+          <a class="btn-order bg-green-dark text-green-light font-bold bx-shadow" href="./order.html">Commander</a>
+        </ul>
+      
+        <ul class="menu-mobile bg-green-dark  bx-shadow hidden" id="menu-mobile">
+          <li class="btn-menu-mobile"><a class="link-menu text-green-light" href="./index.html">Accueil</a></li>
+          <li class="btn-menu-mobile"><a class="link-menu text-green-light" href="./boutique.html">Boutique</a></li>
+          <li class="btn-menu-mobile"><a class="link-menu text-green-light" href="./Fabrication.html">Fabrication</a></li>
+          <li class="btn-menu-mobile"><a class="link-menu text-green-light" href="./a-propos.html">A popos / Nous contacter</a></li>
+          <li class="btn-menu-mobile"><a class="link-menu text-green-light" href="./mon-compte.html">Mon compte</a></li>
+          <li class="btn-menu-mobile"><a class="link-menu text-green-light" href="#">Déconnexion</a></li>
+        </ul>
+      </nav>
+  </header>
     <main>
 
       <h1 class="text-green-dark">Mon pannier</h1>
@@ -75,38 +79,32 @@
       </section>
 
     </main>
-    <footer class="bg-green-dark">
-      <h1 class="logo text-green-light">Scoby.com</h1>
+    <footer class="footer bg-green-dark">
+      <p class="logo-footer text-green-light">Scoby.com</p>
       <div class="links-footer">
-          <div class="links-pages-footer">
-            <a class="link-footer link-footer-page text-green-light" href="./index.html">Accueil</a>
-            <a class="link-footer link-footer-page text-green-light" href="./boutique.html">Boutique</a>
-            <a class="link-footer link-footer-page text-green-light" href="./Fabrication.html">Fabrication</a>
-            <a class="link-footer link-footer-page text-green-light" href="./a-propos.html">A propos / Contact</a>
-            <a class="link-footer link-footer-page text-green-light" href="./mon-compte.html">Mon compte</a>
-          </div>
-          <div class="links-legales-footer text-green-light">
-            <a class="link-footer link-legales-footer text-green-light" href="#">Mentions légales</a>
-            <a class="link-footer link-legales-footer text-green-light" href="#">CGU</a>
-            <a class="link-footer link-legales-footer text-green-light" href="#">Utilisation des cookies</a>
-          </div>
+        <div class="links-pages-footer">
+          <a class="link-footer link-footer-page text-green-light" href="./index.html">Accueil</a>
+          <a class="link-footer link-footer-page text-green-light" href="./boutique.html">Boutique</a>
+          <a class="link-footer link-footer-page text-green-light" href="./Fabrication.html">Fabrication</a>
+          <a class="link-footer link-footer-page text-green-light" href="./a-propos.html">A propos / Contact</a>
+          <a class="link-footer link-footer-page text-green-light" href="./mon-compte.html">Mon compte</a>
+        </div>
+        <div class="links-legales-footer text-green-light">
+          <a class="link-footer link-legales-footer text-green-light" href="#">Mentions légales</a>
+          <a class="link-footer link-legales-footer text-green-light" href="#">CGU</a>
+          <a class="link-footer link-legales-footer text-green-light" href="#">Utilisation des cookies</a>
+        </div>
       </div>
     </footer>
     <template id="product-order-template" class="product-order-template">
       <div class="line-product-order bg-green-dark">
-          
-        <p class="name-product text-green-light">name</p>
-
-        <div class="increase-decrease bg-green-light">
-            <button class="decrease-botton"> - </button>
-            <p class="nb-product nb-increase bg-green-light js-nb-products-order">0</p>
-            <button class="increase-botton js-increase"> + </button>
-        </div>
-
-        <p class="total-price-product text-green-light">0,00€</p>
-
+        <p class="name-product-order js-name-product-order text-green-light">name</p>
+        <button class="btn-qty btn-decrease js-btn-decrease bg-green-light text-green-dark bx-shadow">-</button>
+        <p class="nb-product js-nb-product-order text-green-light">0</p>
+        <button class="btn-qty btn-increase js-btn-increase bg-green-light text-green-dark bx-shadow">+</button>
+        <p class="total-price-product js-total-price-product-order text-green-light">0,00€</p>
       </div>
-    </template>     
-    <script src="./asset/js/script.js"></script>  
+    </template>   
+    <script src="./asset/js/general.js"></script>    
     </body>
     </html>

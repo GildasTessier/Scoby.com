@@ -1,8 +1,10 @@
 
 //For show tab order on click
 document.querySelector('#icon-order').addEventListener('click', function (event) {
+    if (document.querySelector('.js-count-order').innerText ==='0') return
     addRemoveHiddenClass(document.getElementById('menu-order'))
 })
+//For close tab order on click
 document.querySelector('#close-order').addEventListener('click', function (event) {
     addRemoveHiddenClass(document.getElementById('menu-order'))
 })
@@ -52,6 +54,10 @@ document.querySelector('#menu-order').addEventListener('click', function (event)
         if (tabOrderCustomer[nameProduct].qty < 1 ) delete tabOrderCustomer[nameProduct];
         window.localStorage.setItem("tabOrderCustomer", JSON.stringify(tabOrderCustomer));
         displayOrderCustomer() 
+        if (Object.keys(tabOrderCustomer).length === 0) {
+            document.querySelector('.js-count-order').innerText = '0'
+            addRemoveHiddenClass(document.getElementById('menu-order'))
+        }
     }
 })
 
