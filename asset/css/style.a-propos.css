@@ -1,0 +1,39 @@
+.paragraph {
+    margin: 30px;
+    font-size: 1em;
+    line-height: 25px;
+}
+.img-a-propos-desktop {
+    display: none;
+}
+.img-a-propos-mobile {
+    width: 100vw;
+}  
+section {
+    margin-bottom: 70px;
+    
+}
+
+@media (min-width:900px){
+    .top-article {
+        display: flex;
+        flex-direction: row-reverse;
+        margin: 20px;
+    
+       
+    }
+    .paragraph {
+        font-size: 0.8em;
+    }
+  
+    .img-a-propos-mobile {
+        display: none;
+    }
+    .img-a-propos-desktop {
+        display: block;
+        width: 45vw;
+    }
+}
+
+
+/* 500 - 850 */
