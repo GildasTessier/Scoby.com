@@ -46,10 +46,10 @@ function createProduct(product) {
 
 // For create table to order in session storage
 function addProductInOrder (products) {
-    let tabOrderCustomer = window.localStorage.getItem("tabOrderCustomer") ? JSON.parse(window.localStorage.getItem("tabOrderCustomer")) : {};
+    
     document.querySelectorAll('.js-product-card').forEach(card => {
-        
         card.addEventListener('click', function (event)  {
+            let tabOrderCustomer = window.localStorage.getItem("tabOrderCustomer") ? JSON.parse(window.localStorage.getItem("tabOrderCustomer")) : {};
             if (!event.target.classList.contains('js-add-product')) return;
 
             let dataProduct = products.filter(product => product.name === this.querySelector('.js-name-product').innerText)[0]
