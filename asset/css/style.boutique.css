@@ -1,0 +1,125 @@
+
+/********************* boutique page ********************/
+.title-section-boutique {
+    text-align: center;
+    font-size: 1.5em;
+    padding: 8px 0;
+}
+.gp-products {
+    margin-bottom: 40px;
+}
+@media (min-width:720px){ 
+    .gp-products {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 10px 10px 40px 10px;
+    }
+    }
+    @media (min-width:1200px){ 
+        .gp-products {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        }
+/*** card product ***/
+.card-product {
+    width: 95%;
+    height: 200px;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: row;
+    border-radius: 5px;
+    position: relative;
+
+}
+.bloc-img-product {
+    width: 40%;
+    border-radius: 5px 0 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.img-product {
+    width: 160px;
+    height:140px;
+}
+.info-product {
+    width: 60%;
+    border-radius: 0 5px 5px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px 8px;
+}
+.name-product {
+    font-size: 1.2em;
+}
+.descrip-product {
+    font-size: 0.8em;
+    line-height: 20px;
+}
+.btns-opt-product {
+    width: 115px;
+}
+.btns-product {
+    display: flex;
+    justify-content: space-between;
+}
+@media (min-width:500px){ 
+    .btns-product {
+        padding: 0 10px;
+    }
+}
+.opt-product {
+    
+    background-color: #AEB8A6;
+    color: #63685D;
+    border: none;
+    border-radius: 5px;
+    height: 46px;
+    padding: 0px 12px;
+
+    font-family: 'comfortaa-light';
+    font-size: 0.6em;
+    
+}
+.opt-product.active {
+    background-color: var(--green-dark);
+    color: var(--withe);
+    border: var(--withe) solid 1px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    opacity: 100%;
+}
+.price-product {
+    margin-top: 5px;
+}
+.add-product {
+    width: 47px;
+    height: 47px;
+    border: none;
+    border-radius: 47px;
+    vertical-align: middle;
+}
+.img-btn-add {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+}
+.tx-animate-add-product {
+    display: none;
+}
+.bloc-img-product.animate, .info-product.animate {
+opacity: 50%;
+}
+.tx-animate-add-product-active {
+    display: block;
+    z-index: 3;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+   
+    font-size: 1.5em;
+
+}
