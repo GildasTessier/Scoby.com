@@ -6,7 +6,7 @@
         "composition": "Le classique mais incontournable Kombucha Nature à base de Thé Noir, de Thé Vert et de Cassonade",
         "sizes": ["33", "75"],
         "prices": [3.00, 6.00],
-        "img": "./asset/img/img-classique.png"
+        "img": "./asset/img/img-boutique/img-classique.png"
     },
     {
         "id": 2,
@@ -15,7 +15,7 @@
         "composition": "Un Kombucha au bon gout d’Hibiscus à base de Thé Noir, de Thé Vert et de Cassonade et bien sûre d’hibiscus",
         "sizes": ["33", "75"],
         "prices": [4, 8],
-        "img": "./asset/img/img-hibiscus.png"
+        "img": "./asset/img/img-boutique/img-hibiscus.png"
     },
     {
         "id": 3,
@@ -24,7 +24,7 @@
         "composition": "Un Kombucha au bon gout de menthe à base de Thé Noir, de Thé Vert et de Cassonade et bien sûre de menthe",
         "sizes": ["33", "75"],
         "prices": [4, 8],
-        "img": "./asset/img/img-menthe.png"
+        "img": "./asset/img/img-boutique/img-menthe.png"
     },
     {
         "id": 4,
@@ -33,7 +33,7 @@
         "composition": "Un Kombucha au bon gout de violettes à base de Thé Noir, de Thé Vert et de Cassonade et bien sûre de violettes",
         "sizes": ["33", "75"],
         "prices": [4, 8],
-        "img": "./asset/img/img-classique.png"
+        "img": "./asset/img/img-boutique/img-violette.png"
     },
     {
         "id": 5,
@@ -42,7 +42,7 @@
         "composition": "Un Kombucha au bon gout de Pomme à base de Thé Noir, de Thé Vert et de Cassonade et bien sûre de pommes",
         "sizes": ["33", "75"],
         "prices": [3, 6],
-        "img": "./asset/img/img-classique.png"
+        "img": "./asset/img/img-boutique/img-pomme.png"
     },
     {
         "id": 6,
@@ -51,7 +51,25 @@
         "composition": "Un Kombucha au bon gout de Fraise à base de Thé Noir, de Thé Vert et de Cassonade et bien sûre de Fraises",
         "sizes": ["33", "75"],
         "prices": [3, 6],
-        "img": "./asset/img/img-classique.png"
+        "img": "./asset/img/img-boutique/img-hibiscus.png"
+    },
+    {
+        "id": 7,
+        "name": "Vinaigre",
+        "class": ["classic"],
+        "composition": "Vinaigre de kombucha à base de Thé Noir, de Thé Vert et de Cassonade",
+        "sizes": ["33", "75"],
+        "prices": [5.00, 10.00],
+        "img": "./asset/img/img-boutique/img-classique.png"
+    },
+    {
+        "id": 8,
+        "name": "Jun ( Miel )",
+        "class": ["classic", "new"],
+        "composition": "Kombucha sans sucre Nature à base Miel de Thé Noir et de Thé Vert",
+        "sizes": ["33", "75"],
+        "prices": [5.00, 10.00],
+        "img": "./asset/img/img-boutique/img-jun.png"
     }
 ]
   

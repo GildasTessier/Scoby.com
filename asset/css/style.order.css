@@ -1,0 +1,29 @@
+
+.total-tva, .total-frais {
+    font-size: 0.8em;
+}
+.total-tva {
+    margin-top: -20px;
+}
+
+@media (min-width:500px){
+    
+    .line-product-order, .title-order, .total-order, .btn-order {
+        max-width: 620px;
+       margin: 10px auto;
+       
+       
+    }
+    .btns-order {
+        max-width: 620px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        margin: 20px auto;
+    }
+    .btn-order {
+        width: 20vw;
+    }
+}

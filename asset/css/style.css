@@ -14,7 +14,7 @@
         src: url(../font/Comfortaa-Light.ttf);
     }
 body {
-    max-width: 1600px;
+    max-width: 1300px;
     margin: auto;
     display: grid; 
     grid-template-rows: auto 1fr auto;
@@ -25,6 +25,9 @@ body {
 }
 .bx-shadow {
         box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+.btn-hover:hover {
+    box-shadow: #40604d50 0px -23px 25px 0px inset, #40604d50 0px -36px 30px 0px inset, #40604d50 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 3px 8px, rgba(0, 0, 0, 0.09) 0px 3px 16px;
 }
 /*********** Background **********/
 body {
@@ -67,7 +70,7 @@ body {
 button {
     font-family: 'comfortaa-light';
 }
-h1 {
+.title-section {
     text-align: center;
     font-size: max(30px, 4vw);
     margin: 30px;
@@ -242,6 +245,7 @@ color: var(--green-dark);
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     margin: 10px 5px;
     padding: 10px 5px ;
     font-size: 15px;

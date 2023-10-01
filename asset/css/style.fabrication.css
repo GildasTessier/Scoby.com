@@ -1,0 +1,44 @@
+.paragraph {
+    margin: 30px;
+    font-size: 1em;
+    line-height: 25px;
+}
+.img-fabrication-tablet {
+    display: none;
+}
+.img-fabrication-mobile {
+    width: 100vw;
+}  
+section {
+    margin-bottom: 70px;
+    
+}
+
+@media (min-width:900px){
+    .article-1 {
+        display: flex;
+        flex-direction: row;
+        margin: 20px;
+    }
+    .top-article {
+        display: flex;
+        flex-direction: row-reverse;
+        margin: 20px;
+    
+       
+    }
+    .paragraph {
+        font-size: 0.8em;
+    }
+  
+    .img-fabrication-mobile {
+        display: none;
+    }
+    .img-fabrication-tablet {
+        display: block;
+        width: 45vw;
+    }
+}
+
+
+/* 500 - 850 */
