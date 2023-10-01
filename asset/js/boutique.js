@@ -55,6 +55,9 @@ function addProductInOrder (products) {
             let dataProduct = products.filter(product => product.name === this.querySelector('.js-name-product').innerText)[0]
 
             let price = this.querySelector('.size-product.active').innerText === '33 cl' ? dataProduct.prices[0] : dataProduct.prices[1];
+
+            animateAddProduct(this)
+
             if (!tabOrderCustomer[dataProduct.name +' '+ this.querySelector('.size-product.active').innerText]){
                  tabOrderCustomer[dataProduct.name +' '+ this.querySelector('.size-product.active').innerText] = {"qty": 1, "priceProduct": price, "totalPrice": price};
                 } 
@@ -81,4 +84,22 @@ function addProductInOrder (products) {
         }
 })
 
+//For créate Animate when customer click on btn add product
+function animateAddProduct (object) {
+    let nbPrc = 30;
+    object.querySelector('.tx-animate-add-product').classList.add('tx-animate-add-product-active')
+    document.querySelector(`.tx-animate-add-product-active`).style.cssText = `bottom: ${nbPrc}%`
+    object.querySelector('.info-product').classList.add('animate')
+    object.querySelector('.bloc-img-product').classList.add('animate')
 
+setTimeout(function run() {
+  nbPrc+= 4;
+  document.querySelector(`.tx-animate-add-product-active`).style.cssText = `bottom: ${nbPrc}%`; 
+   if (nbPrc < 80 ) setTimeout(run, 50);
+   else {
+    object.querySelector('.tx-animate-add-product').classList.remove('tx-animate-add-product-active')
+    object.querySelector('.info-product').classList.remove('animate')
+    object.querySelector('.bloc-img-product').classList.remove('animate')
+   }
+}, 50);
+}

@@ -111,6 +111,7 @@ h1 {
     text-align: center;
     margin-right: -30px;
     overflow: hidden;
+    z-index: 10;
     
 }
 .btn-menu-mobile {
@@ -127,6 +128,7 @@ color: var(--green-dark);
 }
 .menu-order {
     position: absolute;
+    z-index: 2;
     top: 78px;
     width: 100%;
     margin-left: -2%;
@@ -149,7 +151,6 @@ color: var(--green-dark);
         font-size: 1.8em;
     }
     .menu-mobile {
-        z-index: 10;
         width: 300px;
         top: 43px;
     }
@@ -447,6 +448,7 @@ color: var(--green-dark);
     display: flex;
     flex-direction: row;
     border-radius: 5px;
+    position: relative;
 
 }
 .bloc-img-product {
@@ -524,4 +526,19 @@ color: var(--green-dark);
     height: 25px;
     vertical-align: middle;
 }
+.tx-animate-add-product {
+    display: none;
+}
+.bloc-img-product.animate, .info-product.animate {
+opacity: 50%;
+}
+.tx-animate-add-product-active {
+    display: block;
+    z-index: 3;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+   
+    font-size: 1.5em;
 
+}
