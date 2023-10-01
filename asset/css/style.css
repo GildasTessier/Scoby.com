@@ -29,6 +29,9 @@ body {
 .btn-hover:hover {
     box-shadow: #40604d50 0px -23px 25px 0px inset, #40604d50 0px -36px 30px 0px inset, #40604d50 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 3px 8px, rgba(0, 0, 0, 0.09) 0px 3px 16px;
 }
+.btn-hover:active {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
 /*********** Background **********/
 body {
     background-color: var(--gray);
@@ -263,9 +266,17 @@ color: var(--green-dark);
 }
 .btn-qty {
     border-radius: 5px;
+    border: none;
+    border: var(--gray) 1px solid;
     width: 25px;
     height: 23px;
-
+}
+.btn-qty:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.btn-qty:focus {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    color: var(--withe);
 }
 
 
