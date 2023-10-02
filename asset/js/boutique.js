@@ -54,7 +54,6 @@ function addProductInOrder (products) {
             if (!event.target.classList.contains('js-add-product')) return;
 
             let dataProduct = products.filter(product => product.name === this.querySelector('.js-name-product').innerText)[0]
-
             let price = this.querySelector('.size-product.active').innerText === '33 cl' ? dataProduct.prices[0] : dataProduct.prices[1];
 
             animateAddProduct(this)
