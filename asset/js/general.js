@@ -3,14 +3,22 @@
 document.querySelector('#icon-order').addEventListener('click', function (event) {
     if (document.querySelector('.js-count-order').innerText ==='0') return
     addRemoveHiddenClass(document.getElementById('menu-order'))
+    event.target.closest('#icon-order').classList.toggle('active')
+    let icon = document.querySelector('.js-img-icon-order')
+    icon.getAttribute('src') === './asset/img/Icons/drink-light.png' ? icon.src = './asset/img/Icons/drink-dark.png' : icon.src = './asset/img/Icons/drink-light.png'
+    
 })
 //For close tab order on click
 document.querySelector('#close-order').addEventListener('click', function (event) {
     addRemoveHiddenClass(document.getElementById('menu-order'))
+    document.querySelector('#icon-order').classList.toggle('active')
+    let icon = document.querySelector('.js-img-icon-order')
+    icon.getAttribute('src') === './asset/img/Icons/drink-light.png' ? icon.src = './asset/img/Icons/drink-dark.png' : icon.src = './asset/img/Icons/drink-light.png'
 })
 //For show buger menu on click
 document.getElementById('icon-menu-mobile').addEventListener('click', function (event) {
     addRemoveHiddenClass(document.getElementById('menu-mobile'))
+    event.target.classList.toggle('active')
     //For change icon menu mobile when is open
     event.target.getAttribute('src') === './asset/img/Icons/menu.png' ?  event.target.src = './asset/img/Icons/close.png' : event.target.src = './asset/img/Icons/menu.png'
 })

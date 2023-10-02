@@ -12,7 +12,7 @@
         "id": 2,
         "name": "Hibiscus",
         "class": ["floral", "new"],
-        "composition": "Un Kombucha au bon gout d’Hibiscus à base de Thé Noir, de Thé Vert et de Cassonade et bien sûre d’hibiscus",
+        "composition": "Un Kombucha au bon goût d’Hibiscus à base de Thé Noir, de Thé Vert et de Cassonade et bien sûr d’hibiscus",
         "sizes": ["33", "75"],
         "prices": [4, 8],
         "img": "./asset/img/img-boutique/img-hibiscus.png"
@@ -21,7 +21,7 @@
         "id": 3,
         "name": "Menthe",
         "class": ["floral"],
-        "composition": "Un Kombucha au bon gout de menthe à base de Thé Noir, de Thé Vert et de Cassonade et bien sûre de menthe",
+        "composition": "Un Kombucha au bon goût de menthe à base de Thé Noir, de Thé Vert et de Cassonade et bien sûr de menthe",
         "sizes": ["33", "75"],
         "prices": [4, 8],
         "img": "./asset/img/img-boutique/img-menthe.png"
@@ -30,7 +30,7 @@
         "id": 4,
         "name": "Violette",
         "class": ["floral"],
-        "composition": "Un Kombucha au bon gout de violettes à base de Thé Noir, de Thé Vert et de Cassonade et bien sûre de violettes",
+        "composition": "Un Kombucha au bon goût de violette à base de thé noir, de thé vert et de Cassonade et bien sûr de violettes",
         "sizes": ["33", "75"],
         "prices": [4, 8],
         "img": "./asset/img/img-boutique/img-violette.png"
@@ -39,7 +39,7 @@
         "id": 5,
         "name": "Pomme",
         "class": ["fruit", "new"],
-        "composition": "Un Kombucha au bon gout de Pomme à base de Thé Noir, de Thé Vert et de Cassonade et bien sûre de pommes",
+        "composition": "Un Kombucha au bon goût de Pomme à base de Thé Noir, de Thé Vert et de Cassonade et bien sûr de pommes",
         "sizes": ["33", "75"],
         "prices": [3, 6],
         "img": "./asset/img/img-boutique/img-pomme.png"
@@ -48,7 +48,7 @@
         "id": 6,
         "name": "Fraise",
         "class": ["fruit"],
-        "composition": "Un Kombucha au bon gout de Fraise à base de Thé Noir, de Thé Vert et de Cassonade et bien sûre de Fraises",
+        "composition": "Un Kombucha au bon goût de Fraise à base de Thé Noir, de Thé Vert et de Cassonade et bien sûr de Fraises",
         "sizes": ["33", "75"],
         "prices": [3, 6],
         "img": "./asset/img/img-boutique/img-hibiscus.png"
@@ -66,7 +66,7 @@
         "id": 8,
         "name": "Jun ( Miel )",
         "class": ["classic", "new"],
-        "composition": "Kombucha sans sucre Nature à base Miel de Thé Noir et de Thé Vert",
+        "composition": "Kombucha sans sucre Nature à base de Miel, de Thé Noir et de Thé Vert",
         "sizes": ["33", "75"],
         "prices": [5.00, 10.00],
         "img": "./asset/img/img-boutique/img-jun.png"
