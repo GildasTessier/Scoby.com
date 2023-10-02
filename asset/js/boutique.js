@@ -16,6 +16,7 @@ callDataProducts()
 
 // for insert all products in page
 function displayProductsByClass(products) {
+
     let productByClass = products.filter((product => product.class.includes('new')))
     document.getElementById('gp-products-new').append(...productByClass.map(createProduct));
 
@@ -87,7 +88,7 @@ function addProductInOrder (products) {
 //For créate Animate when customer click on btn add product
 function animateAddProduct (object) {
     let nbPrc = 30;
-    object.querySelector('.tx-animate-add-product').classList.add('tx-animate-add-product-active')
+    object.querySelector('.js-tx-animate-add-product').classList.add('tx-animate-add-product-active')
     document.querySelector(`.tx-animate-add-product-active`).style.cssText = `bottom: ${nbPrc}%`
     object.querySelector('.info-product').classList.add('animate')
     object.querySelector('.bloc-img-product').classList.add('animate')
