@@ -146,13 +146,20 @@ border-radius: 5px;
     padding: 30px;
     margin: 20px 0;
 }
-.active-link-menu {
+
+
+
+.link-menu.active, .btn-menu-mobile.active, .btn-menu-mobile.active > a  {
 background: var(--green-light);
 color: var(--green-dark);
 }
+
+
+
+
 .menu-desktop, .img-icon-disconnect {
     display: none;
-}
+} 
 .menu-order {
     position: absolute;
     z-index: 2;
@@ -164,6 +171,7 @@ color: var(--green-dark);
     padding: 20px 0;
     
 }
+
 .btn-order {
     font-size: 1.6em;
     padding: 5px 10%;
@@ -179,7 +187,7 @@ color: var(--green-dark);
     }
     .menu-mobile {
         width: 300px;
-        top: 50px;
+        top: 45px;
     }
     .btn-menu-mobile {
         font-size: 1em;

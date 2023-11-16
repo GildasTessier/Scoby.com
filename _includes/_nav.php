@@ -1,13 +1,14 @@
 <nav class="nav-bar bg-green-dark">
+    <input type="hidden" id="tokenField" value="<?=$_SESSION['token']?>">
     <img id="icon-menu-mobile" class="icon-menu-mobile link-menu-icon" src="./asset/img/Icons/menu.png">
     <div class="logo text-green-light">Scoby.com</div>
 
     <ul class="menu-desktop" id="menu-desktop">
-        <li class="btn-menu-desktop"><a class="link-menu text-green-light" href="./index.html">Accueil</a></li>
-        <li class="btn-menu-desktop"><a class="link-menu text-green-light" href="./shop.html">Boutique</a></li>
-        <li class="btn-menu-desktop"><a class="link-menu text-green-light" href="./manufacturing.html">Fabrication</a></li>
-        <li class="btn-menu-desktop"><a class="link-menu text-green-light active-link-menu" href="./about.html">A popos /Nous contacter</a></li>
-        <li class="btn-menu-desktop"><a class="link-menu text-green-light" href="./account.html">Mon compte</a></li>
+        <li class="btn-menu-desktop active"><a class="link-menu text-green-light <?=addClassActive($url['index'])?> " href="<?=$url['index']?>">Accueil</a></li>
+        <li class="btn-menu-desktop"><a class="link-menu text-green-light <?=addClassActive($url['shop'])?> " href="<?=$url['shop']?>">Boutique</a></li>
+        <li class="btn-menu-desktop"><a class="link-menu text-green-light <?=addClassActive($url['manufacturing'])?> " href="<?=$url['manufacturing']?>">Fabrication</a></li>
+        <li class="btn-menu-desktop"><a class="link-menu text-green-light <?=addClassActive($url['about'])?> " href="<?=$url['about']?>">A popos /Nous contacter</a></li>
+        <li class="btn-menu-desktop"><a class="link-menu text-green-light <?=addClassActive($url['account'])?> " href="<?=$url['account']?>">Mon compte</a></li>
     </ul>
     <div class="icons-nav-bar">
         <a class="icon-disconnect" href="#"><img class="img-icon-disconnect" src="asset/img/Icons/connect.png" alt="picto to connect"></a>
@@ -37,11 +38,11 @@
     </ul>
 
     <ul class="menu-mobile bg-green-dark  bx-shadow hidden" id="menu-mobile">
-        <li class="btn-menu-mobile"><a class="link-menu text-green-light" href="./index.html">Accueil</a></li>
-        <li class="btn-menu-mobile"><a class="link-menu text-green-light" href="./shop.html">Boutique</a></li>
-        <li class="btn-menu-mobile"><a class="link-menu text-green-light" href="./manufacturing.html">Fabrication</a></li>
-        <li class="btn-menu-mobile active-link-menu"><a class="link-menu text-green-light active-link-menu" href="./about.html">A popos / Nous contacter</a></li>
-        <li class="btn-menu-mobile"><a class="link-menu text-green-light" href="./account.html">Mon compte</a></li>
-        <li class="btn-menu-mobile"><a class="link-menu text-green-light" href="#">Déconnexion</a></li>
+        <li class="btn-menu-mobile <?=addClassActive($url['index'])?>"><a class="link-menu text-green-light" href="<?=$url['index']?>">Accueil</a></li>
+        <li class="btn-menu-mobile <?=addClassActive($url['shop'])?>"><a class="link-menu text-green-light" href="<?=$url['shop']?>">Boutique</a></li>
+        <li class="btn-menu-mobile <?=addClassActive($url['manufacturing'])?>"><a class="link-menu text-green-light" href="<?=$url['manufacturing']?>">Fabrication</a></li>
+        <li class="btn-menu-mobile <?=addClassActive($url['about'])?>"><a class="link-menu text-green-light" href="<?=$url['about']?>">A popos / Nous contacter</a></li>
+        <li class="btn-menu-mobile <?=addClassActive($url['account'])?>"><a class="link-menu text-green-light" href="<?=$url['account']?>">Mon compte</a></li>
+        <li class="btn-menu-mobile "><a class="link-menu text-green-light" href="#">Déconnexion</a></li>
     </ul>
 </nav>
