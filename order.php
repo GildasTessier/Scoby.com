@@ -1,3 +1,11 @@
+<?php
+session_start();
+require_once './_includes/functions.php';
+require_once './_includes/url.php';
+require_once './_includes/_dbCo.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -11,50 +19,10 @@
 <body>
     
   <header>
+          <!------------------------------>
+      <!------------ NAV ------------->
+      <?php include './_includes/_nav.php' ?>
 
-    <nav class="nav-bar bg-green-dark">
-      <img id="icon-menu-mobile" class="icon-menu-mobile link-menu-icon" src="./asset/img/Icons/menu.png">
-      <div class="logo text-green-light">Scoby.com</div>
-
-      <ul class="menu-desktop" id="menu-desktop">
-        <li class="btn-menu-desktop"><a class="link-menu text-green-light" href="./index.html">Accueil</a></li>
-        <li class="btn-menu-desktop"><a class="link-menu text-green-light " href="./shop.html">Boutique</a></li>
-        <li class="btn-menu-desktop"><a class="link-menu text-green-light"href="./manufacturing.html">Fabrication</a></li>
-        <li class="btn-menu-desktop"><a class="link-menu text-green-light" href="./about.html">A popos /Nous contacter</a></li>
-        <li class="btn-menu-desktop"><a class="link-menu text-green-light" href="./account.html">Mon compte</a></li>
-      </ul>
-      <div class="icons-nav-bar">
-        <a class="icon-disconnect" href="#"><img class="img-icon-disconnect" src="asset/img/Icons/connect.png" alt="picto to connect"></a>
-        <div class="icon-order link-menu-icon hidden" id="icon-order">
-          <img class="img-icon-order js-img-icon-order" src="./asset/img/Icons/drink-light.png"alt="pictogramme pannier">
-          <p class="count-order js-count-order bg-green-light text-green-dark ">0</p>
-        </div>
-      </div>
-
-        <ul class="menu-order bg-green-light bx-shadow hidden" id="menu-order">
-          <img id="close-order" class="img-close-order" src="./asset/img/Icons/close-page.png" alt="close">
-          <li class="title-order">
-            <p class="title-order-name text-green-dark font-bold">Article</p>
-            <p class="title-order-qty text-green-dark font-bold">Nb</p>
-            <p class="title-order-total text-green-dark font-bold">Total</p>
-          </li>
-          
-          
-          <li class="total-order">
-            <p class="total-order-tx-total text-green-dark font-bold">Prix total commande :</p>
-          </li>
-          <a class="btn-order bg-green-dark text-green-light font-bold bx-shadow" href="./order.html">Commander</a>
-        </ul>
-      
-        <ul class="menu-mobile bg-green-dark  bx-shadow hidden" id="menu-mobile">
-          <li class="btn-menu-mobile"><a class="link-menu text-green-light" href="./index.html">Accueil</a></li>
-          <li class="btn-menu-mobile"><a class="link-menu text-green-light" href="./shop.html">Boutique</a></li>
-          <li class="btn-menu-mobile"><a class="link-menu text-green-light" href="./manufacturing.html">Fabrication</a></li>
-          <li class="btn-menu-mobile"><a class="link-menu text-green-light" href="./about.html">A popos / Nous contacter</a></li>
-          <li class="btn-menu-mobile"><a class="link-menu text-green-light" href="./account.html">Mon compte</a></li>
-          <li class="btn-menu-mobile"><a class="link-menu text-green-light" href="#">Déconnexion</a></li>
-        </ul>
-      </nav>
   </header>
     <main>
 

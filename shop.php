@@ -3,8 +3,9 @@ session_start();
 require_once './_includes/functions.php';
 require_once './_includes/url.php';
 require_once './_includes/_dbCo.php';
-
+generateToken()
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
